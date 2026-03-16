@@ -20,7 +20,7 @@ export const landingPages: PortfolioEntry[] = [
     filePath: "/portfolio-pages/crowdstrike-falcon-xiot.html",
     fileType: "html",
     tags: ["Cybersecurity", "Product Launch", "OT/IoT"],
-    accent: "from-blue-500/20 to-cyan-500/20",
+    accent: "from-primary/30 to-accent/20",
   },
   {
     id: "2",
@@ -31,7 +31,7 @@ export const landingPages: PortfolioEntry[] = [
     filePath: "/portfolio-pages/mitratech-hq-customer-adoption.html",
     fileType: "html",
     tags: ["Customer Adoption", "SaaS", "HR Tech"],
-    accent: "from-violet-500/20 to-purple-500/20",
+    accent: "from-accent/30 to-primary/20",
   },
   {
     id: "3",
@@ -42,7 +42,7 @@ export const landingPages: PortfolioEntry[] = [
     filePath: "/portfolio-pages/mitratech-hr-tech-event.html",
     fileType: "html",
     tags: ["Event Marketing", "Lead Gen", "HR Tech"],
-    accent: "from-emerald-500/20 to-teal-500/20",
+    accent: "from-primary/20 to-accent/30",
   },
   {
     id: "4",
@@ -53,7 +53,7 @@ export const landingPages: PortfolioEntry[] = [
     filePath: "/portfolio-pages/mitratech-perform-ui-refresh.html",
     fileType: "html",
     tags: ["Product Update", "Customer Comms", "SaaS"],
-    accent: "from-orange-500/20 to-amber-500/20",
+    accent: "from-accent/20 to-primary/30",
   },
 ];
 

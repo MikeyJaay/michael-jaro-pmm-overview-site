@@ -26,8 +26,8 @@ const PortfolioCard = ({ entry, index, isHovered, animateProps, zIndex, onHover,
       whileTap={{ scale: animateProps.scale * 0.96 }}
     >
       <div
-        className={`relative w-[240px] overflow-hidden rounded-xl border bg-card transition-shadow duration-300 md:w-[260px] ${
-          isHovered ? "border-primary/40 shadow-[0_0_30px_hsl(var(--primary)/0.2)]" : "border-border/50 shadow-lg"
+        className={`relative w-[240px] overflow-hidden rounded-xl border bg-background transition-shadow duration-300 md:w-[260px] ${
+          isHovered ? "border-primary/30 shadow-lg shadow-primary/10" : "border-border shadow-md"
         }`}
       >
         {/* Gradient top accent */}

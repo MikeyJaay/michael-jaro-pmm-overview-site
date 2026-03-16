@@ -12,7 +12,7 @@ const ArtifactViewer = ({ entry, onClose }: Props) => (
   <AnimatePresence>
     {entry && (
       <motion.div
-        className="fixed inset-0 z-[100] flex flex-col bg-background/95 backdrop-blur-xl"
+        className="fixed inset-0 z-[100] flex flex-col bg-background/98 backdrop-blur-xl"
         initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.96 }}

@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button";
 const HeroSection = () => (
   <section className="relative overflow-hidden py-28 md:py-40">
     {/* Background glow */}
-    <div className="pointer-events-none absolute inset-0">
-      <div className="absolute left-1/2 top-1/3 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/5 blur-[120px]" />
-      <div className="absolute right-1/4 top-2/3 h-[300px] w-[300px] rounded-full bg-accent/5 blur-[100px]" />
+      <div className="pointer-events-none absolute inset-0">
+      <div className="absolute left-1/2 top-1/3 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/[0.06] blur-[120px]" />
+      <div className="absolute right-1/4 top-2/3 h-[300px] w-[300px] rounded-full bg-accent/[0.06] blur-[100px]" />
     </div>
 
     <div className="container relative mx-auto px-6 text-center">

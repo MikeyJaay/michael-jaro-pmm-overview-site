@@ -80,7 +80,7 @@ const Navbar = () => {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 8, scale: 0.96 }}
                   transition={{ duration: 0.15 }}
-                  className="absolute right-0 top-full mt-3 w-64 overflow-hidden rounded-xl border border-border/50 bg-card/95 p-2 shadow-xl backdrop-blur-xl"
+                  className="absolute right-0 top-full mt-3 w-64 overflow-hidden rounded-xl border border-border bg-background p-2 shadow-lg"
                 >
                   {workSamples.map((item) => (
                     <Link
