@@ -38,23 +38,20 @@ const LandingPageGallery = () => {
             </p>
           </motion.div>
 
-          {/* Desktop: Fanned cards */}
+          {/* Desktop: Dock-style horizontal row */}
           {!isMobile ? (
-            <div className="flex items-center justify-center" style={{ height: 440 }}>
-              <div className="relative">
-                {landingPages.map((entry, i) => (
-                  <PortfolioCard
-                    key={entry.id}
-                    entry={entry}
-                    index={i}
-                    total={landingPages.length}
-                    isHovered={hoveredIndex === i}
-                    hoveredIndex={hoveredIndex}
-                    onHover={setHoveredIndex}
-                    onClick={() => setViewerEntry(entry)}
-                  />
-                ))}
-              </div>
+            <div className="flex items-end justify-center gap-5 pb-8" style={{ minHeight: 420 }}>
+              {landingPages.map((entry, i) => (
+                <PortfolioCard
+                  key={entry.id}
+                  entry={entry}
+                  index={i}
+                  total={landingPages.length}
+                  distance={hoveredIndex === null ? -1 : Math.abs(i - hoveredIndex)}
+                  onHover={setHoveredIndex}
+                  onClick={() => setViewerEntry(entry)}
+                />
+              ))}
             </div>
           ) : (
             /* Mobile: Stacked cards */
@@ -65,29 +62,44 @@ const LandingPageGallery = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  className="cursor-pointer rounded-xl border border-border/50 bg-card p-5 glow-border transition-shadow hover:glow-border-hover"
+                  className="cursor-pointer rounded-xl border border-border/50 bg-card overflow-hidden glow-border transition-shadow hover:glow-border-hover"
                   onClick={() => setViewerEntry(entry)}
                 >
-                  <div className={`mb-3 flex h-32 items-center justify-center rounded-lg bg-gradient-to-br ${entry.accent}`}>
-                    <span className="font-display text-3xl font-bold text-foreground/20">
-                      {entry.title.charAt(0)}
-                    </span>
+                  {/* Mobile thumbnail */}
+                  <div className="relative h-40 w-full overflow-hidden bg-background">
+                    <iframe
+                      src={entry.filePath}
+                      title={`${entry.title} preview`}
+                      className="pointer-events-none absolute left-0 top-0"
+                      style={{
+                        width: "1280px",
+                        height: "960px",
+                        transform: "scale(0.3)",
+                        transformOrigin: "top left",
+                      }}
+                      sandbox="allow-same-origin"
+                      loading="lazy"
+                      tabIndex={-1}
+                    />
+                    <div className="absolute inset-0" />
                   </div>
-                  <p className="mb-1 text-xs font-medium uppercase tracking-wider text-primary">
-                    {entry.category}
-                  </p>
-                  <h3 className="mb-1.5 font-display text-base font-semibold text-foreground">
-                    {entry.title}
-                  </h3>
-                  <p className="mb-3 text-xs text-muted-foreground line-clamp-2">
-                    {entry.description}
-                  </p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {entry.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" className="text-[10px]">
-                        {tag}
-                      </Badge>
-                    ))}
+                  <div className="p-5">
+                    <p className="mb-1 text-xs font-medium uppercase tracking-wider text-primary">
+                      {entry.category}
+                    </p>
+                    <h3 className="mb-1.5 font-display text-base font-semibold text-foreground">
+                      {entry.title}
+                    </h3>
+                    <p className="mb-3 text-xs text-muted-foreground line-clamp-2">
+                      {entry.description}
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {entry.tags.map((tag) => (
+                        <Badge key={tag} variant="secondary" className="text-[10px]">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
                 </motion.div>
               ))}
