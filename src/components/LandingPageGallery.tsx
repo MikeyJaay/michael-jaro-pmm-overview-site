@@ -43,15 +43,14 @@ const LandingPageGallery = () => {
           {!isMobile ? (
             <div
               className="relative mx-auto flex items-end justify-center"
-              style={{ minHeight: 480, perspective: "1200px" }}
+              style={{ minHeight: 520, perspective: "1200px" }}
             >
               {landingPages.map((entry, i) => {
-                const offset = i - mid; // e.g. -1.5, -0.5, 0.5, 1.5 for 4 cards
-                const baseRotate = offset * 8; // fan angle
-                const baseX = offset * 90; // horizontal spread
-                const baseY = Math.abs(offset) * 18; // arc: outer cards lower
+                const offset = i - mid;
+                const baseRotate = offset * 6;
+                const baseX = offset * 120;
+                const baseY = Math.abs(offset) * 14;
 
-                // Hover: hovered card pops up & straightens, others shrink & push apart
                 const isHovered = hoveredIndex === i;
                 const distance = hoveredIndex !== null ? Math.abs(i - hoveredIndex) : -1;
 
@@ -63,16 +62,15 @@ const LandingPageGallery = () => {
 
                 if (hoveredIndex !== null) {
                   if (isHovered) {
-                    scale = 1.22;
+                    scale = 1.18;
                     rotate = 0;
-                    y = -40;
+                    y = -36;
                     zIndex = 50;
                   } else {
-                    scale = 0.92;
-                    // push neighbors outward from hovered card
+                    scale = 0.94;
                     const pushDir = i < hoveredIndex ? -1 : 1;
-                    x = baseX + pushDir * (30 / distance);
-                    y = baseY + 8;
+                    x = baseX + pushDir * (28 / Math.max(distance, 0.5));
+                    y = baseY + 6;
                   }
                 }
 
