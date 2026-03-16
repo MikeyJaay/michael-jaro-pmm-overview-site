@@ -1,0 +1,73 @@
+export interface PortfolioEntry {
+  id: string;
+  slug: string;
+  title: string;
+  category: string;
+  description: string;
+  filePath: string;
+  fileType: string;
+  tags: string[];
+  accent: string; // tailwind color class for card accent
+}
+
+export const landingPages: PortfolioEntry[] = [
+  {
+    id: "1",
+    slug: "crowdstrike-falcon-xiot",
+    title: "CrowdStrike Falcon for XIoT",
+    category: "Landing Page",
+    description: "Product solution page for CrowdStrike's extended IoT security platform, translating complex OT/IoT security concepts into compelling product narrative.",
+    filePath: "/portfolio-pages/crowdstrike-falcon-xiot.html",
+    fileType: "html",
+    tags: ["Cybersecurity", "Product Launch", "OT/IoT"],
+    accent: "from-blue-500/20 to-cyan-500/20",
+  },
+  {
+    id: "2",
+    slug: "mitratech-hq-customer-adoption",
+    title: "Mitratech HQ Platform Adoption",
+    category: "Landing Page",
+    description: "Customer adoption landing page designed to drive platform engagement and feature discovery for existing Mitratech HQ users.",
+    filePath: "/portfolio-pages/mitratech-hq-customer-adoption.html",
+    fileType: "html",
+    tags: ["Customer Adoption", "SaaS", "HR Tech"],
+    accent: "from-violet-500/20 to-purple-500/20",
+  },
+  {
+    id: "3",
+    slug: "mitratech-hr-tech-event",
+    title: "Mitratech HR Tech Event Registration",
+    category: "Landing Page",
+    description: "Event registration page for HR Tech conference, combining event marketing with product positioning and lead capture strategy.",
+    filePath: "/portfolio-pages/mitratech-hr-tech-event.html",
+    fileType: "html",
+    tags: ["Event Marketing", "Lead Gen", "HR Tech"],
+    accent: "from-emerald-500/20 to-teal-500/20",
+  },
+  {
+    id: "4",
+    slug: "mitratech-perform-ui-refresh",
+    title: "Mitratech Perform UI Refresh",
+    category: "Landing Page",
+    description: "Customer-facing landing page announcing a major UI refresh, positioning the update as a strategic product evolution.",
+    filePath: "/portfolio-pages/mitratech-perform-ui-refresh.html",
+    fileType: "html",
+    tags: ["Product Update", "Customer Comms", "SaaS"],
+    accent: "from-orange-500/20 to-amber-500/20",
+  },
+];
+
+export interface ArtifactCategory {
+  slug: string;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export const artifactCategories: ArtifactCategory[] = [
+  { slug: "landing-pages", title: "Landing Pages", description: "Product positioning, conversion strategy, and technical storytelling", icon: "Layout" },
+  { slug: "decks", title: "Decks", description: "Product pitch decks, solution overviews, and executive narratives", icon: "Presentation" },
+  { slug: "messaging", title: "Messaging & Positioning", description: "Messaging frameworks, positioning statements, and value pillar development", icon: "MessageSquare" },
+  { slug: "technical-marketing", title: "Technical Marketing", description: "Technical whitepapers, datasheets, and architecture explanations", icon: "FileText" },
+  { slug: "sales-enablement", title: "Sales Enablement", description: "Discovery guides, demo narratives, and objection handling", icon: "Target" },
+];
