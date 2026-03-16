@@ -16,8 +16,8 @@ interface Props {
 const PortfolioCard = ({ entry, index, isHovered, animateProps, zIndex, onHover, onClick }: Props) => {
   return (
     <motion.div
-      className="absolute cursor-pointer"
-      style={{ zIndex, originX: 0.5, originY: 1 }}
+      className="relative cursor-pointer"
+      style={{ zIndex }}
       animate={animateProps}
       transition={{ type: "spring", stiffness: 300, damping: 28, mass: 0.8 }}
       onMouseEnter={() => onHover(index)}
@@ -26,7 +26,7 @@ const PortfolioCard = ({ entry, index, isHovered, animateProps, zIndex, onHover,
       whileTap={{ scale: animateProps.scale * 0.96 }}
     >
       <div
-        className={`relative w-[260px] overflow-hidden rounded-2xl border transition-shadow duration-300 md:w-[280px] ${
+        className={`relative w-[260px] overflow-hidden rounded-2xl border transition-shadow duration-300 ${
           isHovered ? "border-primary/20 bg-background shadow-xl shadow-black/[0.08]" : "border-border/60 bg-background shadow-md shadow-black/[0.04]"
         }`}
       >
@@ -41,7 +41,7 @@ const PortfolioCard = ({ entry, index, isHovered, animateProps, zIndex, onHover,
             className="pointer-events-none absolute left-0 top-0 origin-top-left"
             style={{ width: "1280px", height: "960px", transform: "scale(0.203)", transformOrigin: "top left" }}
             sandbox="allow-same-origin"
-            loading="lazy"
+            loading="eager"
             tabIndex={-1}
           />
           <div className="absolute inset-0" />
