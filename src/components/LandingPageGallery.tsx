@@ -11,9 +11,6 @@ const LandingPageGallery = () => {
   const [viewerEntry, setViewerEntry] = useState<PortfolioEntry | null>(null);
   const isMobile = useIsMobile();
 
-  const total = landingPages.length;
-  const mid = (total - 1) / 2;
-
   return (
     <>
       <section className="relative py-20 md:py-28">
@@ -41,36 +38,22 @@ const LandingPageGallery = () => {
           </motion.div>
 
           {!isMobile ? (
-            <div
-              className="relative mx-auto flex items-end justify-center"
-              style={{ minHeight: 520, perspective: "1200px" }}
-            >
+            <div className="flex items-end justify-center gap-6" style={{ minHeight: 480 }}>
               {landingPages.map((entry, i) => {
-                const offset = i - mid;
-                const baseRotate = offset * 6;
-                const baseX = offset * 120;
-                const baseY = Math.abs(offset) * 14;
-
                 const isHovered = hoveredIndex === i;
-                const distance = hoveredIndex !== null ? Math.abs(i - hoveredIndex) : -1;
 
                 let scale = 1;
-                let rotate = baseRotate;
-                let x = baseX;
-                let y = baseY;
-                let zIndex = total - Math.abs(Math.round(offset));
+                let y = 0;
+                let zIndex = 1;
 
                 if (hoveredIndex !== null) {
                   if (isHovered) {
-                    scale = 1.18;
-                    rotate = 0;
-                    y = -36;
-                    zIndex = 50;
+                    scale = 1.12;
+                    y = -20;
+                    zIndex = 10;
                   } else {
-                    scale = 0.94;
-                    const pushDir = i < hoveredIndex ? -1 : 1;
-                    x = baseX + pushDir * (28 / Math.max(distance, 0.5));
-                    y = baseY + 6;
+                    scale = 0.95;
+                    y = 0;
                   }
                 }
 
@@ -79,9 +62,9 @@ const LandingPageGallery = () => {
                     key={entry.id}
                     entry={entry}
                     index={i}
-                    total={total}
+                    total={landingPages.length}
                     isHovered={isHovered}
-                    animateProps={{ scale, rotate, x, y }}
+                    animateProps={{ scale, rotate: 0, x: 0, y }}
                     zIndex={zIndex}
                     onHover={setHoveredIndex}
                     onClick={() => setViewerEntry(entry)}
@@ -107,7 +90,7 @@ const LandingPageGallery = () => {
                       className="pointer-events-none absolute left-0 top-0"
                       style={{ width: "1280px", height: "960px", transform: "scale(0.3)", transformOrigin: "top left" }}
                       sandbox="allow-same-origin"
-                      loading="lazy"
+                      loading="eager"
                       tabIndex={-1}
                     />
                     <div className="absolute inset-0" />
