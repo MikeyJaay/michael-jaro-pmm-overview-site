@@ -20,32 +20,30 @@ const logos = [
 
 const LogoCarousel = () => {
   return (
-    <section className="border-y border-border bg-secondary/30 py-14 md:py-16 overflow-hidden">
-      <div className="container mx-auto px-4 md:px-8">
-        <p className="mb-8 text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-          I've Worked at Companies from Bootstrap Startups to Global Enterprises
-        </p>
-      </div>
-      <div className="relative mb-10">
+    <section className="border-y border-border bg-secondary/30 py-8 md:py-10 overflow-hidden">
+      <p className="mb-5 text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+        I've Worked at Companies from Bootstrap Startups to Global Enterprises
+      </p>
+      <div className="relative mb-5">
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-secondary/30 to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-secondary/30 to-transparent" />
         <div className="flex animate-scroll">
           {[...logos, ...logos, ...logos].map((logo, i) => (
             <div
               key={i}
-              className="mx-6 inline-flex h-12 items-center justify-center shrink-0 w-[160px] md:w-[200px]"
+              className="mx-8 inline-flex h-16 items-center justify-center shrink-0 w-[180px] md:w-[220px]"
             >
               <img
                 src={logo.src}
                 alt={logo.name}
-                className="h-8 md:h-10 w-auto max-w-[160px] md:max-w-[200px] object-contain opacity-60 hover:opacity-100 transition-opacity"
+                className="h-14 md:h-16 w-auto max-w-[180px] md:max-w-[220px] object-contain opacity-60 hover:opacity-100 transition-opacity"
               />
             </div>
           ))}
         </div>
       </div>
       <div className="flex justify-center">
-        <Button asChild variant="outline" className="gap-2 font-semibold">
+        <Button asChild variant="outline" size="sm" className="gap-2 font-semibold">
           <Link to="/career">
             See Career Timeline <ArrowRight className="h-4 w-4" />
           </Link>
