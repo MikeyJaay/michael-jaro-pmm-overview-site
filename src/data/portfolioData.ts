@@ -32,6 +32,7 @@ export const landingPages: PortfolioEntry[] = [
     description: "Customer adoption landing page designed to drive platform engagement and feature discovery for existing Mitratech HQ users.",
     filePath: "/portfolio-pages/mitratech-hq-customer-adoption.html",
     fileType: "html",
+    thumbnail: "/portfolio-thumbnails/mitratech-hq-customer-adoption.webp",
     tags: ["Customer Adoption", "SaaS", "HR Tech"],
     accent: "from-accent/30 to-primary/20",
   },
