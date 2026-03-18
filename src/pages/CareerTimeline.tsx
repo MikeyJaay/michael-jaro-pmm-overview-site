@@ -20,7 +20,7 @@ const timelineData = [
     company: "Codility",
     logo: codilityLogo,
     role: "Sales Development Representative",
-    period: "2021 – 2022",
+    period: "MARCH. 2022 - FEB. 2023",
     summary:
       "Advanced rapidly from inbound to top-performing outbound SDR by mastering technical buyer conversations and driving pipeline for an enterprise-grade engineering assessment platform.",
   },
