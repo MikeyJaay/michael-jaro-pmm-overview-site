@@ -6,6 +6,7 @@ export interface PortfolioEntry {
   description: string;
   filePath: string;
   fileType: string;
+  thumbnail: string;
   tags: string[];
   accent: string; // tailwind color class for card accent
 }
