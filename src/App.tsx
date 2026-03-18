@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import AppShell from "./components/AppShell";
 import Index from "./pages/Index";
 import LandingPages from "./pages/LandingPages";
+import CareerTimeline from "./pages/CareerTimeline";
 import ComingSoon from "./pages/ComingSoon";
 import NotFound from "./pages/NotFound";
 
@@ -20,6 +21,7 @@ const App = () => (
         <Routes>
           <Route element={<AppShell />}>
             <Route path="/" element={<Index />} />
+            <Route path="/career" element={<CareerTimeline />} />
             <Route path="/landing-pages" element={<LandingPages />} />
             <Route path="/:category" element={<ComingSoon />} />
           </Route>
