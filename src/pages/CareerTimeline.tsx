@@ -12,7 +12,7 @@ const timelineData = [
     company: "Domino's",
     logo: dominosLogo,
     role: "Product Marketing Associate",
-    period: "2019 – 2021",
+    period: "NOV. 2019 - MAR. 2022",
     summary:
       "Embedded within the engineering team to lead go-to-market and executive communications for a next-generation point-of-sale system, translating complex technical development into adoption-driving narratives for franchisees and executive leadership.",
   },
@@ -20,7 +20,7 @@ const timelineData = [
     company: "Codility",
     logo: codilityLogo,
     role: "Sales Development Representative",
-    period: "2021 – 2022",
+    period: "MARCH. 2022 - FEB. 2023",
     summary:
       "Advanced rapidly from inbound to top-performing outbound SDR by mastering technical buyer conversations and driving pipeline for an enterprise-grade engineering assessment platform.",
   },
@@ -28,7 +28,7 @@ const timelineData = [
     company: "Hackajob",
     logo: hackajobLogo,
     role: "Growth Lead",
-    period: "2022 – 2023",
+    period: "FEB. 2023 - MAY 2024",
     summary:
       "Brought on as the third U.S employee to drive the 0→1 U.S. go-to-market motion from zero brand awareness, launching and scaling a UK-based technical hiring platform through foundational messaging, positioning, and early customer acquisition.",
   },
@@ -36,7 +36,7 @@ const timelineData = [
     company: "CrowdStrike",
     logo: crowdstrikeLogo,
     role: "Product Marketing Manager",
-    period: "2023 – 2024",
+    period: "MAY 2024 - AUG. 2024",
     summary:
       "Led the rebrand and go-to-market relaunch of Falcon for IoT to Falcon for XIoT, repositioning the platform for a billion-dollar critical infrastructure security market and contributing to $9M in pipeline generation ahead of full market rollout.",
   },
@@ -44,7 +44,7 @@ const timelineData = [
     company: "Mitratech",
     logo: mitratechLogo,
     role: "Technical Product Marketing Manager, AI Trust & Security",
-    period: "2025 – Present",
+    period: "FEB. 2025 - PRESENT",
     summary:
       "Own AI trust and security go-to-market standards across an enterprise portfolio, shaping how LLM-based, solution-specific AI capabilities are responsibly launched, evaluated, and sold in enterprise environments.",
   },
