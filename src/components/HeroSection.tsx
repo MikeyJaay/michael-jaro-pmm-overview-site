@@ -19,7 +19,7 @@ const HeroSection = () => (
         <p className="mb-6 text-sm font-medium uppercase tracking-widest text-primary">
           Product Marketing Portfolio
         </p>
-        <h1 className="font-display text-4xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
+        <h1 className="font-display text-5xl font-bold leading-tight tracking-tight md:text-7xl lg:text-8xl">
           Bridging Product, Market,
           <br />
           <span className="text-gradient">and Sales.</span>
