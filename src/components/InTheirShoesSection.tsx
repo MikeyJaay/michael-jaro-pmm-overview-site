@@ -41,6 +41,7 @@ const InTheirShoesSection = () => (
         transition={{ duration: 0.6 }}
         className="mx-auto mb-12 max-w-2xl text-center"
       >
+        <p className="mb-4 text-sm font-medium uppercase tracking-widest text-primary">My Approach</p>
         <h2 className="mb-4 font-display text-3xl font-bold tracking-tight md:text-4xl">
           I've Been in Their Shoes
         </h2>
