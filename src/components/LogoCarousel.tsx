@@ -7,7 +7,6 @@ import crowdstrikeLogo from "@/assets/logos/crowdstrike.svg";
 import dominosLogo from "@/assets/logos/dominos.svg";
 import hackajobLogo from "@/assets/logos/hackajob.svg";
 import mitratechLogo from "@/assets/logos/mitratech.svg";
-import veryableLogo from "@/assets/logos/veryable.svg";
 
 const logos = [
   { name: "Mitratech", src: mitratechLogo },
@@ -15,7 +14,6 @@ const logos = [
   { name: "CrowdStrike", src: crowdstrikeLogo },
   { name: "Hackajob", src: hackajobLogo },
   { name: "Domino's", src: dominosLogo },
-  { name: "Veryable", src: veryableLogo },
 ];
 
 const LogoCarousel = () => {
@@ -31,12 +29,12 @@ const LogoCarousel = () => {
           {[...logos, ...logos, ...logos].map((logo, i) => (
             <div
               key={i}
-              className="mx-8 inline-flex h-16 items-center justify-center shrink-0 w-[180px] md:w-[220px]"
+              className="mx-8 inline-flex h-28 items-center justify-center shrink-0 min-w-[280px] md:min-w-[360px]"
             >
               <img
                 src={logo.src}
                 alt={logo.name}
-                className="h-14 md:h-16 w-auto max-w-[180px] md:max-w-[220px] object-contain opacity-60 hover:opacity-100 transition-opacity"
+                className="h-24 md:h-28 w-auto max-w-[280px] md:max-w-[360px] object-contain opacity-60 hover:opacity-100 transition-opacity"
               />
             </div>
           ))}
