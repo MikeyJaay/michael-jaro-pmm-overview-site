@@ -24,7 +24,7 @@ const RotatingText = () => {
 
   return (
     <span
-      className={`text-gradient inline-block transition-all duration-400 ${
+      className={`text-gradient inline-block pb-2 transition-all duration-400 ${
         isVisible
           ? "opacity-100 translate-y-0"
           : "opacity-0 translate-y-2"
