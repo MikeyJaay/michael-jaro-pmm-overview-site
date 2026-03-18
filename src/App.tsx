@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import AppShell from "./components/AppShell";
 import Index from "./pages/Index";
 import LandingPages from "./pages/LandingPages";
+import CareerTimeline from "./pages/CareerTimeline";
 import ComingSoon from "./pages/ComingSoon";
 import NotFound from "./pages/NotFound";
 
