@@ -16,7 +16,7 @@ const HeroSection = () => (
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       >
-        <p className="mb-4 text-sm font-medium uppercase tracking-widest text-primary">
+        <p className="mb-6 text-sm font-medium uppercase tracking-widest text-primary">
           Product Marketing Portfolio
         </p>
         <h1 className="font-display text-4xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
