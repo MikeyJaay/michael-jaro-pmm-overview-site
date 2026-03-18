@@ -9,37 +9,46 @@ import hackajobLogo from "@/assets/logos/hackajob.svg";
 import mitratechLogo from "@/assets/logos/mitratech.svg";
 
 const logos = [
-  { name: "Mitratech", src: mitratechLogo },
-  { name: "Codility", src: codilityLogo },
-  { name: "CrowdStrike", src: crowdstrikeLogo },
-  { name: "Hackajob", src: hackajobLogo },
-  { name: "Domino's", src: dominosLogo },
+  { name: "Mitratech", src: mitratechLogo, imageClassName: "h-28 md:h-32 max-w-[260px] md:max-w-[320px]" },
+  { name: "Codility", src: codilityLogo, imageClassName: "h-28 md:h-32 max-w-[260px] md:max-w-[320px]" },
+  { name: "CrowdStrike", src: crowdstrikeLogo, imageClassName: "h-24 md:h-28 max-w-[300px] md:max-w-[360px]" },
+  { name: "Hackajob", src: hackajobLogo, imageClassName: "h-24 md:h-28 max-w-[240px] md:max-w-[300px]" },
+  { name: "Domino's", src: dominosLogo, imageClassName: "h-24 md:h-28 max-w-[260px] md:max-w-[320px]" },
 ];
 
 const LogoCarousel = () => {
   return (
-    <section className="border-y border-border bg-secondary/30 py-8 md:py-10 overflow-hidden">
-      <p className="mb-5 text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+    <section className="overflow-hidden border-y border-border bg-secondary/30 py-8 md:py-10">
+      <p className="mb-4 text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground md:mb-5">
         I've Worked at Companies from Bootstrap Startups to Global Enterprises
       </p>
-      <div className="relative mb-5">
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-secondary/30 to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-secondary/30 to-transparent" />
-        <div className="flex animate-scroll">
-          {[...logos, ...logos, ...logos].map((logo, i) => (
-            <div
-              key={i}
-              className="mx-4 inline-flex h-32 items-center justify-center shrink-0 min-w-[200px] md:min-w-[240px]"
-            >
-              <img
-                src={logo.src}
-                alt={logo.name}
-                className="h-28 md:h-32 w-auto max-w-[200px] md:max-w-[240px] object-contain opacity-60 hover:opacity-100 transition-opacity"
-              />
-            </div>
-          ))}
+
+      <div className="relative mb-4 md:mb-5">
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-secondary/30 to-transparent md:w-24" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-secondary/30 to-transparent md:w-24" />
+
+        <div className="logo-marquee">
+          <div className="logo-marquee-track">
+            {[0, 1].map((groupIndex) => (
+              <div key={groupIndex} className="logo-marquee-group" aria-hidden={groupIndex === 1}>
+                {logos.map((logo) => (
+                  <div
+                    key={`${groupIndex}-${logo.name}`}
+                    className="inline-flex h-32 w-[240px] shrink-0 items-center justify-center md:h-36 md:w-[300px]"
+                  >
+                    <img
+                      src={logo.src}
+                      alt={logo.name}
+                      className={`${logo.imageClassName} w-auto object-contain opacity-70 transition-opacity duration-300 hover:opacity-100`}
+                    />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+
       <div className="flex justify-center">
         <Button asChild variant="outline" size="sm" className="gap-2 font-semibold">
           <Link to="/career">
