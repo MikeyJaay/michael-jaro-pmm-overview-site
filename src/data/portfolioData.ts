@@ -6,6 +6,7 @@ export interface PortfolioEntry {
   description: string;
   filePath: string;
   fileType: string;
+  thumbnail: string;
   tags: string[];
   accent: string; // tailwind color class for card accent
 }
@@ -19,6 +20,7 @@ export const landingPages: PortfolioEntry[] = [
     description: "Product solution page for CrowdStrike's extended IoT security platform, translating complex OT/IoT security concepts into compelling product narrative.",
     filePath: "/portfolio-pages/crowdstrike-falcon-xiot.html",
     fileType: "html",
+    thumbnail: "/portfolio-thumbnails/crowdstrike-falcon-xiot.webp",
     tags: ["Cybersecurity", "Product Launch", "OT/IoT"],
     accent: "from-primary/30 to-accent/20",
   },
@@ -30,6 +32,7 @@ export const landingPages: PortfolioEntry[] = [
     description: "Customer adoption landing page designed to drive platform engagement and feature discovery for existing Mitratech HQ users.",
     filePath: "/portfolio-pages/mitratech-hq-customer-adoption.html",
     fileType: "html",
+    thumbnail: "/portfolio-thumbnails/mitratech-hq-customer-adoption.webp",
     tags: ["Customer Adoption", "SaaS", "HR Tech"],
     accent: "from-accent/30 to-primary/20",
   },
@@ -41,6 +44,7 @@ export const landingPages: PortfolioEntry[] = [
     description: "Event registration page for HR Tech conference, combining event marketing with product positioning and lead capture strategy.",
     filePath: "/portfolio-pages/mitratech-hr-tech-event.html",
     fileType: "html",
+    thumbnail: "/portfolio-thumbnails/mitratech-hr-tech-event.webp",
     tags: ["Event Marketing", "Lead Gen", "HR Tech"],
     accent: "from-primary/20 to-accent/30",
   },
@@ -52,6 +56,7 @@ export const landingPages: PortfolioEntry[] = [
     description: "Customer-facing landing page announcing a major UI refresh, positioning the update as a strategic product evolution.",
     filePath: "/portfolio-pages/mitratech-perform-ui-refresh.html",
     fileType: "html",
+    thumbnail: "/portfolio-thumbnails/mitratech-perform-ui-refresh.webp",
     tags: ["Product Update", "Customer Comms", "SaaS"],
     accent: "from-accent/20 to-primary/30",
   },

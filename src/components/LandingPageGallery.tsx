@@ -83,17 +83,13 @@ const LandingPageGallery = () => {
                   className="cursor-pointer rounded-xl border border-border/50 bg-card overflow-hidden glow-border transition-shadow hover:glow-border-hover"
                   onClick={() => setViewerEntry(entry)}
                 >
-                  <div className="relative h-40 w-full overflow-hidden bg-background">
-                    <iframe
-                      src={entry.filePath}
-                      title={`${entry.title} preview`}
-                      className="pointer-events-none absolute left-0 top-0"
-                      style={{ width: "1280px", height: "960px", transform: "scale(0.3)", transformOrigin: "top left" }}
-                      sandbox="allow-same-origin"
-                      loading="eager"
-                      tabIndex={-1}
+                  <div className="relative h-40 w-full overflow-hidden bg-muted">
+                    <img
+                      src={entry.thumbnail}
+                      alt={`${entry.title} preview`}
+                      className="h-full w-full object-cover object-top"
+                      loading="lazy"
                     />
-                    <div className="absolute inset-0" />
                   </div>
                   <div className="p-5">
                     <p className="mb-1 text-xs font-medium uppercase tracking-wider text-primary">{entry.category}</p>
