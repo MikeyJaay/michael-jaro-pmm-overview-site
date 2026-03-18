@@ -36,7 +36,7 @@ const timelineData = [
     company: "CrowdStrike",
     logo: crowdstrikeLogo,
     role: "Product Marketing Manager",
-    period: "2023 – 2024",
+    period: "MAY 2024 - AUG. 2024",
     summary:
       "Led the rebrand and go-to-market relaunch of Falcon for IoT to Falcon for XIoT, repositioning the platform for a billion-dollar critical infrastructure security market and contributing to $9M in pipeline generation ahead of full market rollout.",
   },
