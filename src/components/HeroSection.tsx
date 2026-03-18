@@ -46,7 +46,7 @@ const HeroSection = () => (
         className="mt-10 md:mt-12"
       >
         <Button asChild size="lg" className="gap-2 rounded-full px-10 py-6 text-base">
-          <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/michaeljaro/" target="_blank" rel="noopener noreferrer">
             Connect on LinkedIn <ArrowRight size={16} />
           </a>
         </Button>
