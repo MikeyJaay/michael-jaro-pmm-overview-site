@@ -28,7 +28,7 @@ const timelineData = [
     company: "Hackajob",
     logo: hackajobLogo,
     role: "Growth Lead",
-    period: "2022 – 2023",
+    period: "FEB. 2023 - MAY 2024",
     summary:
       "Brought on as the third U.S employee to drive the 0→1 U.S. go-to-market motion from zero brand awareness, launching and scaling a UK-based technical hiring platform through foundational messaging, positioning, and early customer acquisition.",
   },
