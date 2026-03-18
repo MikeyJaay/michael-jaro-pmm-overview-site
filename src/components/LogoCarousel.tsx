@@ -23,7 +23,7 @@ const LogoCarousel = () => {
     <section className="border-y border-border bg-secondary/30 py-14 md:py-16 overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <p className="mb-8 text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-          We've Worked at companies form Bootstrap Startups to to Global Enterprises
+          I've Worked at Companies from Bootstrap Startups to Global Enterprises
         </p>
       </div>
       <div className="relative mb-10">
