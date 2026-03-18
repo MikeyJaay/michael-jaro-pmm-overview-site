@@ -12,7 +12,7 @@ const timelineData = [
     company: "Domino's",
     logo: dominosLogo,
     role: "Product Marketing Associate",
-    period: "2019 – 2021",
+    period: "NOV. 2019 - MAR. 2022",
     summary:
       "Embedded within the engineering team to lead go-to-market and executive communications for a next-generation point-of-sale system, translating complex technical development into adoption-driving narratives for franchisees and executive leadership.",
   },
