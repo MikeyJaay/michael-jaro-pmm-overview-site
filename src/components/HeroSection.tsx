@@ -50,7 +50,7 @@ const HeroSection = () => (
         transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
         className="mt-12 md:mt-14"
       >
-        <Button asChild size="lg" className="gap-2 rounded-full px-8">
+        <Button asChild size="lg" className="gap-2 rounded-full px-10 py-6 text-base">
           <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
             Connect on LinkedIn <ArrowRight size={16} />
           </a>
