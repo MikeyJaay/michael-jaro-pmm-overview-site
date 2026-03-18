@@ -20,6 +20,7 @@ export const landingPages: PortfolioEntry[] = [
     description: "Product solution page for CrowdStrike's extended IoT security platform, translating complex OT/IoT security concepts into compelling product narrative.",
     filePath: "/portfolio-pages/crowdstrike-falcon-xiot.html",
     fileType: "html",
+    thumbnail: "/portfolio-thumbnails/crowdstrike-falcon-xiot.webp",
     tags: ["Cybersecurity", "Product Launch", "OT/IoT"],
     accent: "from-primary/30 to-accent/20",
   },
