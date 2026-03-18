@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const phrases = [
   "Marketing and Sales",
-  "Product Managment and Product Marketing",
+  "Product and Marketing",
   "Strategy and Execution",
 ];
 
