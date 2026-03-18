@@ -30,7 +30,7 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-        className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
+        className="mx-auto mt-8 max-w-3xl text-xl text-muted-foreground md:mt-10 md:text-2xl"
       >
         Technical Product Marketing Manager specializing in AI, security, and enterprise SaaS — turning complex systems into clear narratives that drive adoption and pipeline.
       </motion.p>
