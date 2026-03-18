@@ -34,16 +34,6 @@ const fadeUp = {
 const GtmBreaksSection = () => (
   <section className="border-t border-border/50 py-20 md:py-28">
     <div className="container mx-auto px-6">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="mb-4"
-      >
-        <p className="text-sm font-medium uppercase tracking-widest text-primary">My Approach</p>
-      </motion.div>
-
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
