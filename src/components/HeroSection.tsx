@@ -39,7 +39,7 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
-        className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground/80"
+        className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground/80 md:mt-8"
       >
         My approach is built on strategic empathy across GTM teams. From starting in sales to leading product marketing and technical AI launches, I understand how products are built, how buyers evaluate, and how deals are actually won. I translate that into messaging, launches, and enablement that hold up in real sales cycles — not just on slides.
       </motion.p>
