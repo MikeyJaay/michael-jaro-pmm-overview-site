@@ -29,16 +29,16 @@ const LogoCarousel = () => {
       <div className="relative mb-10">
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-secondary/30 to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-secondary/30 to-transparent" />
-        <div className="flex animate-scroll whitespace-nowrap">
-          {[...logos, ...logos].map((logo, i) => (
+        <div className="flex animate-scroll">
+          {[...logos, ...logos, ...logos].map((logo, i) => (
             <div
               key={i}
-              className="mx-4 inline-flex h-28 items-center justify-center shrink-0 min-w-[260px] md:min-w-[340px]"
+              className="mx-6 inline-flex h-12 items-center justify-center shrink-0 w-[160px] md:w-[200px]"
             >
               <img
                 src={logo.src}
                 alt={logo.name}
-                className="h-20 md:h-28 w-auto max-w-[280px] md:max-w-[420px] object-contain opacity-70 hover:opacity-100 transition-opacity"
+                className="h-8 md:h-10 w-auto max-w-[160px] md:max-w-[200px] object-contain opacity-60 hover:opacity-100 transition-opacity"
               />
             </div>
           ))}
