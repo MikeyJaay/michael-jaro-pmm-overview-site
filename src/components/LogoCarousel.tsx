@@ -29,12 +29,12 @@ const LogoCarousel = () => {
           {[...logos, ...logos, ...logos].map((logo, i) => (
             <div
               key={i}
-              className="mx-8 inline-flex h-28 items-center justify-center shrink-0 min-w-[280px] md:min-w-[360px]"
+              className="mx-4 inline-flex h-32 items-center justify-center shrink-0 min-w-[200px] md:min-w-[240px]"
             >
               <img
                 src={logo.src}
                 alt={logo.name}
-                className="h-24 md:h-28 w-auto max-w-[280px] md:max-w-[360px] object-contain opacity-60 hover:opacity-100 transition-opacity"
+                className="h-28 md:h-32 w-auto max-w-[200px] md:max-w-[240px] object-contain opacity-60 hover:opacity-100 transition-opacity"
               />
             </div>
           ))}
