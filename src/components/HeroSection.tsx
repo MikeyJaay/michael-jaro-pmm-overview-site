@@ -48,7 +48,7 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-        className="mt-10"
+        className="mt-12 md:mt-14"
       >
         <Button asChild size="lg" className="gap-2 rounded-full px-8">
           <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
