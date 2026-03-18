@@ -55,6 +55,22 @@ const Navbar = () => {
             )}
           </Link>
 
+          {/* Career Timeline */}
+          <Link
+            to="/career"
+            className="relative rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-foreground"
+            style={{ color: location.pathname === "/career" ? "hsl(var(--foreground))" : "hsl(var(--muted-foreground))" }}
+          >
+            Career Timeline
+            {location.pathname === "/career" && (
+              <motion.div
+                layoutId="nav-indicator"
+                className="absolute inset-x-1 -bottom-[17px] h-[2px] bg-primary"
+                transition={{ type: "spring", stiffness: 400, damping: 30 }}
+              />
+            )}
+          </Link>
+
           {/* Work Samples dropdown */}
           <div ref={dropdownRef} className="relative">
             <button
