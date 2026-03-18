@@ -44,6 +44,7 @@ export const landingPages: PortfolioEntry[] = [
     description: "Event registration page for HR Tech conference, combining event marketing with product positioning and lead capture strategy.",
     filePath: "/portfolio-pages/mitratech-hr-tech-event.html",
     fileType: "html",
+    thumbnail: "/portfolio-thumbnails/mitratech-hr-tech-event.webp",
     tags: ["Event Marketing", "Lead Gen", "HR Tech"],
     accent: "from-primary/20 to-accent/30",
   },
