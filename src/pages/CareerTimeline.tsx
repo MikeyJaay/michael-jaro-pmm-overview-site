@@ -44,7 +44,7 @@ const timelineData = [
     company: "Mitratech",
     logo: mitratechLogo,
     role: "Technical Product Marketing Manager, AI Trust & Security",
-    period: "2025 – Present",
+    period: "FEB. 2025 - PRESENT",
     summary:
       "Own AI trust and security go-to-market standards across an enterprise portfolio, shaping how LLM-based, solution-specific AI capabilities are responsibly launched, evaluated, and sold in enterprise environments.",
   },
