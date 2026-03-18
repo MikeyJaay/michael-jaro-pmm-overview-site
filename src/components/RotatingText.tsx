@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const phrases = [
   "Marketing and Sales",
   "Product and Marketing",
-  "Strategy and Execution",
+  "Sales and Product",
 ];
 
 const RotatingText = () => {
