@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import RotatingText from "@/components/RotatingText";
 
 const HeroSection = () => (
   <section className="relative overflow-hidden py-28 md:py-44">
@@ -20,10 +21,13 @@ const HeroSection = () => (
           Michael Jaroszynski
         </p>
         <h1 className="font-display text-4xl font-bold leading-[1.1] tracking-tight md:text-6xl lg:text-7xl">
-          Bridging the Gap Between
-          <br />
-          <span className="text-gradient">Product, Marketing, and Sales</span>
+          Bridging the Gap Between…
         </h1>
+        <div className="mt-4 min-h-[3rem] md:min-h-[4rem]">
+          <p className="font-display text-3xl font-bold md:text-4xl lg:text-5xl">
+            <RotatingText />
+          </p>
+        </div>
       </motion.div>
 
       <motion.p
