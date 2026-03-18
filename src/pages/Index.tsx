@@ -1,4 +1,7 @@
 import HeroSection from "@/components/HeroSection";
+import GtmBreaksSection from "@/components/GtmBreaksSection";
+import InTheirShoesSection from "@/components/InTheirShoesSection";
+import WhatIBuildSection from "@/components/WhatIBuildSection";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { landingPages } from "@/data/portfolioData";
@@ -8,8 +11,11 @@ import { ArrowRight } from "lucide-react";
 const Index = () => (
   <>
     <HeroSection />
+    <GtmBreaksSection />
+    <InTheirShoesSection />
+    <WhatIBuildSection />
 
-    {/* Featured artifacts preview */}
+    {/* Featured work preview */}
     <section className="border-t border-border/50 py-20">
       <div className="container mx-auto px-6">
         <div className="mb-10 flex items-end justify-between">
