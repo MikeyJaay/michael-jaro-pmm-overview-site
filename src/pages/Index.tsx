@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import LogoCarousel from "@/components/LogoCarousel";
 import GtmBreaksSection from "@/components/GtmBreaksSection";
 import InTheirShoesSection from "@/components/InTheirShoesSection";
 import WhatIBuildSection from "@/components/WhatIBuildSection";
@@ -11,6 +12,7 @@ import { ArrowRight } from "lucide-react";
 const Index = () => (
   <>
     <HeroSection />
+    <LogoCarousel />
     <GtmBreaksSection />
     <InTheirShoesSection />
     <WhatIBuildSection />
