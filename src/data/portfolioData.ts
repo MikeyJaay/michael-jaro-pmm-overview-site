@@ -56,6 +56,7 @@ export const landingPages: PortfolioEntry[] = [
     description: "Customer-facing landing page announcing a major UI refresh, positioning the update as a strategic product evolution.",
     filePath: "/portfolio-pages/mitratech-perform-ui-refresh.html",
     fileType: "html",
+    thumbnail: "/portfolio-thumbnails/mitratech-perform-ui-refresh.webp",
     tags: ["Product Update", "Customer Comms", "SaaS"],
     accent: "from-accent/20 to-primary/30",
   },
