@@ -139,6 +139,9 @@ const Navbar = () => {
               <Link to="/" onClick={() => setMobileOpen(false)} className="rounded-md px-3 py-2.5 text-sm font-medium transition-colors hover:bg-secondary" style={{ color: location.pathname === "/" ? "hsl(var(--foreground))" : "hsl(var(--muted-foreground))" }}>
                 Home
               </Link>
+              <Link to="/career" onClick={() => setMobileOpen(false)} className="rounded-md px-3 py-2.5 text-sm font-medium transition-colors hover:bg-secondary" style={{ color: location.pathname === "/career" ? "hsl(var(--foreground))" : "hsl(var(--muted-foreground))" }}>
+                Career Timeline
+              </Link>
               <p className="px-3 pt-3 pb-1 text-xs font-medium uppercase tracking-wider text-muted-foreground">Work Samples</p>
               {workSamples.map((item) => (
                 <Link

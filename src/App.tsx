@@ -21,6 +21,7 @@ const App = () => (
         <Routes>
           <Route element={<AppShell />}>
             <Route path="/" element={<Index />} />
+            <Route path="/career" element={<CareerTimeline />} />
             <Route path="/landing-pages" element={<LandingPages />} />
             <Route path="/:category" element={<ComingSoon />} />
           </Route>
