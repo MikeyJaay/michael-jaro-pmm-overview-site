@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 import codilityLogo from "@/assets/logos/codility.svg";
@@ -9,55 +8,54 @@ import hackajobLogo from "@/assets/logos/hackajob.svg";
 import mitratechLogo from "@/assets/logos/mitratech.svg";
 
 const logos = [
-  { name: "Mitratech", src: mitratechLogo, imageClassName: "h-28 md:h-32 max-w-[260px] md:max-w-[320px]" },
-  { name: "Codility", src: codilityLogo, imageClassName: "h-28 md:h-32 max-w-[260px] md:max-w-[320px]" },
-  { name: "CrowdStrike", src: crowdstrikeLogo, imageClassName: "h-24 md:h-28 max-w-[300px] md:max-w-[360px]" },
-  { name: "Hackajob", src: hackajobLogo, imageClassName: "h-24 md:h-28 max-w-[240px] md:max-w-[300px]" },
-  { name: "Domino's", src: dominosLogo, imageClassName: "h-24 md:h-28 max-w-[260px] md:max-w-[320px]" },
+  { name: "Mitratech", src: mitratechLogo },
+  { name: "Codility", src: codilityLogo },
+  { name: "CrowdStrike", src: crowdstrikeLogo },
+  { name: "Hackajob", src: hackajobLogo },
+  { name: "Domino's", src: dominosLogo },
 ];
 
-const LogoCarousel = () => {
-  return (
-    <section className="overflow-hidden border-y border-border bg-secondary/30 py-8 md:py-10">
-      <p className="mb-4 text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground md:mb-5">
-        I've Worked at Companies from Bootstrap Startups to Global Enterprises
-      </p>
+const LogoCarousel = () => (
+  <section className="border-y border-border/40 bg-secondary/20 py-6">
+    <p className="mb-3 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+      From Bootstrap Startups to Global Enterprises
+    </p>
 
-      <div className="relative mb-4 md:mb-5">
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-secondary/30 to-transparent md:w-24" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-secondary/30 to-transparent md:w-24" />
+    <div className="relative">
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-secondary/20 to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-secondary/20 to-transparent" />
 
-        <div className="logo-marquee">
-          <div className="logo-marquee-track">
-            {[0, 1].map((groupIndex) => (
-              <div key={groupIndex} className="logo-marquee-group" aria-hidden={groupIndex === 1}>
-                {logos.map((logo) => (
-                  <div
-                    key={`${groupIndex}-${logo.name}`}
-                    className="inline-flex h-32 w-[240px] shrink-0 items-center justify-center md:h-36 md:w-[300px]"
-                  >
-                    <img
-                      src={logo.src}
-                      alt={logo.name}
-                      className={`${logo.imageClassName} w-auto object-contain opacity-70 transition-opacity duration-300 hover:opacity-100`}
-                    />
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
+      <div className="logo-marquee">
+        <div className="logo-marquee-track">
+          {[0, 1].map((g) => (
+            <div key={g} className="logo-marquee-group" aria-hidden={g === 1}>
+              {logos.map((logo) => (
+                <div
+                  key={`${g}-${logo.name}`}
+                  className="inline-flex h-16 w-[180px] shrink-0 items-center justify-center md:h-20 md:w-[220px]"
+                >
+                  <img
+                    src={logo.src}
+                    alt={logo.name}
+                    className="h-14 max-w-[160px] object-contain opacity-60 transition-opacity hover:opacity-100 md:h-16 md:max-w-[200px]"
+                  />
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
+    </div>
 
-      <div className="flex justify-center">
-        <Button asChild variant="outline" size="sm" className="gap-2 font-semibold">
-          <Link to="/career">
-            See Career Timeline <ArrowRight className="h-4 w-4" />
-          </Link>
-        </Button>
-      </div>
-    </section>
-  );
-};
+    <div className="mt-3 flex justify-center">
+      <Link
+        to="/career"
+        className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground transition-colors hover:text-primary"
+      >
+        See Career Timeline <ArrowRight className="h-3 w-3" />
+      </Link>
+    </div>
+  </section>
+);
 
 export default LogoCarousel;
