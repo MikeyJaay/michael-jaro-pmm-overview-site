@@ -38,7 +38,11 @@ const LandingPageGallery = () => {
           </motion.div>
 
           {!isMobile ? (
-            <div className="flex items-end justify-center gap-6" style={{ minHeight: 480 }}>
+            <div
+              className="flex items-end justify-center gap-6"
+              style={{ minHeight: 480 }}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
               {landingPages.map((entry, i) => {
                 const isHovered = hoveredIndex === i;
 
@@ -47,10 +51,15 @@ const LandingPageGallery = () => {
                 let zIndex = 1;
 
                 if (hoveredIndex !== null) {
-                  if (isHovered) {
-                    scale = 1.12;
-                    y = -20;
+                  const distance = Math.abs(hoveredIndex - i);
+                  if (distance === 0) {
+                    scale = 1.15;
+                    y = -24;
                     zIndex = 10;
+                  } else if (distance === 1) {
+                    scale = 1.05;
+                    y = -10;
+                    zIndex = 5;
                   } else {
                     scale = 0.95;
                     y = 0;
