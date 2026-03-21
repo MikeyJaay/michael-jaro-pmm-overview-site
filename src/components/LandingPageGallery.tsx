@@ -73,7 +73,7 @@ const LandingPageGallery = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                   className="cursor-pointer rounded-xl border border-border/50 bg-card overflow-hidden glow-border transition-shadow hover:glow-border-hover"
-                  onClick={() => setViewerEntry(entry)}
+                  onClick={() => window.open(entry.filePath, '_blank')}
                 >
                   <div className="relative h-40 w-full overflow-hidden bg-muted">
                     <img
