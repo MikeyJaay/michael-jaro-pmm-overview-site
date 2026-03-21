@@ -100,7 +100,6 @@ const LandingPageGallery = () => {
         </div>
       </section>
 
-      <ArtifactViewer entry={viewerEntry} onClose={() => setViewerEntry(null)} />
     </>
   );
 };
