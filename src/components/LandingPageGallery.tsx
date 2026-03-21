@@ -7,7 +7,6 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { Badge } from "@/components/ui/badge";
 
 const LandingPageGallery = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [viewerEntry, setViewerEntry] = useState<PortfolioEntry | null>(null);
   const isMobile = useIsMobile();
 
@@ -38,48 +37,36 @@ const LandingPageGallery = () => {
           </motion.div>
 
           {!isMobile ? (
-            <div
-              className="flex items-end justify-center gap-6"
-              style={{ minHeight: 480 }}
-              onMouseLeave={() => setHoveredIndex(null)}
-            >
-              {landingPages.map((entry, i) => {
-                const isHovered = hoveredIndex === i;
-
-                let scale = 1;
-                let y = 0;
-                let zIndex = 1;
-
-                if (hoveredIndex !== null) {
-                  const distance = Math.abs(hoveredIndex - i);
-                  if (distance === 0) {
-                    scale = 1.15;
-                    y = -24;
-                    zIndex = 10;
-                  } else if (distance === 1) {
-                    scale = 1.05;
-                    y = -10;
-                    zIndex = 5;
-                  } else {
-                    scale = 0.95;
-                    y = 0;
-                  }
-                }
-
-                return (
-                  <PortfolioCard
-                    key={entry.id}
-                    entry={entry}
-                    index={i}
-                    total={landingPages.length}
-                    isHovered={isHovered}
-                    animateProps={{ scale, rotate: 0, x: 0, y }}
-                    zIndex={zIndex}
-                    onHover={setHoveredIndex}
-                    onClick={() => setViewerEntry(entry)}
-                  />
-                );
-              })}
+            <div className="grid grid-cols-4 gap-6">
+              {landingPages.map((entry, i) => (
+                <motion.div
+                  key={entry.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className="cursor-pointer rounded-2xl border border-border/60 bg-card overflow-hidden transition-all duration-200 hover:border-primary hover:shadow-[0_0_20px_hsl(var(--primary)/0.25)]"
+                  onClick={() => setViewerEntry(entry)}
+                >
+                  <div className="relative h-44 w-full overflow-hidden bg-muted">
+                    <img
+                      src={entry.thumbnail}
+                      alt={`${entry.title} preview`}
+                      className="h-full w-full object-cover object-top"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <p className="mb-1 text-xs font-medium uppercase tracking-wider text-primary">{entry.category}</p>
+                    <h3 className="mb-1.5 font-display text-sm font-semibold leading-snug text-foreground">{entry.title}</h3>
+                    <p className="mb-3 text-[11px] leading-relaxed text-muted-foreground line-clamp-2">{entry.description}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {entry.tags.map((tag) => (
+                        <Badge key={tag} variant="secondary" className="text-[10px]">{tag}</Badge>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           ) : (
             <div className="flex flex-col gap-4">
