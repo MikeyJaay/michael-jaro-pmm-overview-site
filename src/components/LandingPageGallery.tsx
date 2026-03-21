@@ -1,13 +1,9 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { landingPages, type PortfolioEntry } from "@/data/portfolioData";
-import PortfolioCard from "./PortfolioCard";
-import ArtifactViewer from "./ArtifactViewer";
+import { landingPages } from "@/data/portfolioData";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Badge } from "@/components/ui/badge";
 
 const LandingPageGallery = () => {
-  const [viewerEntry, setViewerEntry] = useState<PortfolioEntry | null>(null);
   const isMobile = useIsMobile();
 
   return (
@@ -45,7 +41,7 @@ const LandingPageGallery = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                   className="cursor-pointer rounded-2xl border border-border/60 bg-card overflow-hidden transition-all duration-200 hover:border-primary hover:shadow-[0_0_20px_hsl(var(--primary)/0.25)]"
-                  onClick={() => setViewerEntry(entry)}
+                  onClick={() => window.open(entry.filePath, '_blank')}
                 >
                   <div className="relative h-44 w-full overflow-hidden bg-muted">
                     <img
@@ -77,7 +73,7 @@ const LandingPageGallery = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                   className="cursor-pointer rounded-xl border border-border/50 bg-card overflow-hidden glow-border transition-shadow hover:glow-border-hover"
-                  onClick={() => setViewerEntry(entry)}
+                  onClick={() => window.open(entry.filePath, '_blank')}
                 >
                   <div className="relative h-40 w-full overflow-hidden bg-muted">
                     <img
@@ -104,7 +100,6 @@ const LandingPageGallery = () => {
         </div>
       </section>
 
-      <ArtifactViewer entry={viewerEntry} onClose={() => setViewerEntry(null)} />
     </>
   );
 };
