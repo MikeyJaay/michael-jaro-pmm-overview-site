@@ -7,7 +7,6 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { Badge } from "@/components/ui/badge";
 
 const LandingPageGallery = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [viewerEntry, setViewerEntry] = useState<PortfolioEntry | null>(null);
   const isMobile = useIsMobile();
 
