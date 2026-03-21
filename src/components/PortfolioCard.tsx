@@ -21,7 +21,6 @@ const PortfolioCard = ({ entry, index, isHovered, animateProps, zIndex, onHover,
       animate={animateProps}
       transition={{ type: "spring", stiffness: 300, damping: 28, mass: 0.8 }}
       onMouseEnter={() => onHover(index)}
-      onMouseLeave={() => onHover(null)}
       onClick={onClick}
       whileTap={{ scale: animateProps.scale * 0.96 }}
     >
