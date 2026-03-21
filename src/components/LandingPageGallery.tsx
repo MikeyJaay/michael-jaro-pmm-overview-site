@@ -1,13 +1,9 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { landingPages, type PortfolioEntry } from "@/data/portfolioData";
-import PortfolioCard from "./PortfolioCard";
-import ArtifactViewer from "./ArtifactViewer";
+import { landingPages } from "@/data/portfolioData";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Badge } from "@/components/ui/badge";
 
 const LandingPageGallery = () => {
-  const [viewerEntry, setViewerEntry] = useState<PortfolioEntry | null>(null);
   const isMobile = useIsMobile();
 
   return (
