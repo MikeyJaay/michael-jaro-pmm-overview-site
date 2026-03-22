@@ -149,7 +149,7 @@ const CareerTimeline = () => {
 
   return (
     <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4 md:px-8">
+      <div className="container mx-auto">
         <div className="mx-auto max-w-3xl">
           <div ref={headerRef}>
             <h1

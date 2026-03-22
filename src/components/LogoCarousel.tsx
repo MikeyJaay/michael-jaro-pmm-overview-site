@@ -8,43 +8,33 @@ import hackajobLogo from "@/assets/logos/hackajob.svg";
 import mitratechLogo from "@/assets/logos/mitratech.svg";
 
 const logos = [
-  { name: "Mitratech", src: mitratechLogo },
-  { name: "Codility", src: codilityLogo },
   { name: "CrowdStrike", src: crowdstrikeLogo },
-  { name: "Hackajob", src: hackajobLogo },
+  { name: "Codility", src: codilityLogo },
   { name: "Domino's", src: dominosLogo },
+  { name: "Hackajob", src: hackajobLogo },
+  { name: "Mitratech", src: mitratechLogo },
 ];
 
 const LogoCarousel = () => (
   <section className="border-y border-border/40 bg-secondary/20 py-6">
     <p className="mb-3 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-      From Bootstrap Startups to Global Enterprises
+      I've Worked at Companies from Bootstrap Startups to Global Enterprises.
     </p>
 
-    <div className="relative">
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-secondary/20 to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-secondary/20 to-transparent" />
-
-      <div className="logo-marquee">
-        <div className="logo-marquee-track">
-          {[0, 1].map((g) => (
-            <div key={g} className="logo-marquee-group" aria-hidden={g === 1}>
-              {logos.map((logo) => (
-                <div
-                  key={`${g}-${logo.name}`}
-                  className="inline-flex h-16 w-[180px] shrink-0 items-center justify-center md:h-20 md:w-[220px]"
-                >
-                  <img
-                    src={logo.src}
-                    alt={logo.name}
-                    className="h-14 max-w-[160px] object-contain opacity-60 transition-opacity hover:opacity-100 md:h-16 md:max-w-[200px]"
-                  />
-                </div>
-              ))}
-            </div>
-          ))}
+    <div className="container mx-auto flex w-full flex-wrap items-center justify-center gap-x-6 gap-y-8 sm:gap-x-8 md:flex-nowrap md:gap-x-4 lg:gap-x-5 xl:gap-x-7">
+      {logos.map((logo) => (
+        <div key={logo.name} className="flex shrink-0 basis-[40%] items-center justify-center sm:basis-[28%] md:basis-0 md:min-w-0 md:flex-1">
+          <img
+            src={logo.src}
+            alt={logo.name}
+            width={360}
+            height={80}
+            loading="eager"
+            decoding="async"
+            className="h-12 w-auto max-h-12 max-w-[min(100%,220px)] object-contain opacity-60 transition-opacity hover:opacity-100 sm:h-14 sm:max-h-14 sm:max-w-[min(100%,260px)] md:h-16 md:max-h-16 md:max-w-[min(100%,300px)] lg:h-20 lg:max-h-20 lg:max-w-[min(100%,360px)] xl:h-[5.25rem] xl:max-h-[5.25rem] xl:max-w-[min(100%,400px)] 2xl:h-24 2xl:max-h-24 2xl:max-w-[min(100%,460px)]"
+          />
         </div>
-      </div>
+      ))}
     </div>
 
     <div className="mt-3 flex justify-center">

@@ -9,18 +9,18 @@ const cards = [
 
 const GtmBreaksSection = () => (
   <section className="py-14 md:py-20">
-    <div className="container mx-auto px-6">
+    <div className="container mx-auto">
       <motion.h2
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="mb-8 font-display text-2xl font-bold tracking-tight md:text-3xl"
+        className="mb-8 font-display text-3xl font-bold tracking-tight md:mb-10 md:text-4xl lg:text-[2.5rem]"
       >
         Where GTM Breaks
       </motion.h2>
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-3 lg:gap-6">
         {cards.map((card, i) => (
           <motion.div
             key={card.title}
@@ -28,14 +28,14 @@ const GtmBreaksSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.08, duration: 0.5 }}
-            className="rounded-xl border border-border/40 bg-card/80 p-5 transition-all duration-200 hover:border-primary/20 hover:shadow-sm"
+            className="rounded-xl border border-border/40 bg-card/80 p-6 transition-all duration-200 hover:border-primary/20 hover:shadow-sm md:p-7"
           >
-            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
-              <card.icon size={18} />
+            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary md:h-11 md:w-11">
+              <card.icon size={20} />
             </div>
-            <h3 className="mb-1 font-display text-base font-semibold text-foreground">{card.title}</h3>
-            <p className="text-sm leading-relaxed text-foreground/80">{card.body}</p>
-            <p className="mt-0.5 text-xs italic text-muted-foreground">({card.sub})</p>
+            <h3 className="mb-2 font-display text-lg font-semibold text-foreground md:text-xl">{card.title}</h3>
+            <p className="text-base leading-relaxed text-foreground/80">{card.body}</p>
+            <p className="mt-1.5 text-sm italic text-muted-foreground">({card.sub})</p>
           </motion.div>
         ))}
       </div>
@@ -45,7 +45,7 @@ const GtmBreaksSection = () => (
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="mt-8 text-center font-display text-lg font-bold tracking-tight text-foreground md:text-xl"
+        className="mt-10 text-center font-display text-xl font-bold tracking-tight text-foreground md:mt-12 md:text-2xl"
       >
         GTM Fails from Misaligned Teams.
       </motion.p>
