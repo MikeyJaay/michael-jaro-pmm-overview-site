@@ -13,20 +13,20 @@ const LandingPageGallery = () => {
           <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/5 blur-[150px]" />
         </div>
 
-        <div className="container relative mx-auto px-6">
+        <div className="container relative mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="mb-16 text-center"
           >
-            <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary">
+            <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary md:text-base">
               Artifact Showcase
             </p>
-            <h1 className="font-display text-3xl font-bold tracking-tight md:text-5xl">
+            <h1 className="font-display text-3xl font-bold tracking-tight md:text-5xl lg:text-6xl">
               Landing Pages
             </h1>
-            <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+            <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground md:text-lg lg:max-w-3xl">
               Archived landing pages demonstrating product positioning, conversion strategy,
               and technical storytelling.
             </p>

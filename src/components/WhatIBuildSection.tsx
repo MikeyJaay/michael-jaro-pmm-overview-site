@@ -10,18 +10,18 @@ const cards = [
 
 const WhatIBuildSection = () => (
   <section className="border-t border-border/30 py-14 md:py-20">
-    <div className="container mx-auto px-6">
+    <div className="container mx-auto">
       <motion.h2
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="mb-8 text-center font-display text-2xl font-bold tracking-tight md:text-3xl"
+        className="mb-8 text-center font-display text-3xl font-bold tracking-tight md:mb-10 md:text-4xl lg:text-[2.5rem]"
       >
         What I Build
       </motion.h2>
 
-      <div className="mx-auto grid max-w-3xl gap-4 sm:grid-cols-2">
+      <div className="mx-auto grid max-w-6xl gap-5 sm:grid-cols-2 lg:max-w-none lg:gap-6">
         {cards.map((card, i) => (
           <motion.div
             key={card.title}
@@ -29,13 +29,13 @@ const WhatIBuildSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.06, duration: 0.5 }}
-            className="rounded-xl border border-border/40 bg-card/80 p-5 transition-all duration-200 hover:border-primary/20 hover:shadow-sm"
+            className="rounded-xl border border-border/40 bg-card/80 p-6 transition-all duration-200 hover:border-primary/20 hover:shadow-sm md:p-7"
           >
-            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
-              <card.icon size={18} />
+            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary md:h-11 md:w-11">
+              <card.icon size={20} />
             </div>
-            <h3 className="mb-1 font-display text-sm font-semibold text-foreground">{card.title}</h3>
-            <p className="text-xs leading-relaxed text-muted-foreground">{card.body}</p>
+            <h3 className="mb-2 font-display text-base font-semibold text-foreground md:text-lg">{card.title}</h3>
+            <p className="text-sm leading-relaxed text-muted-foreground md:text-base">{card.body}</p>
           </motion.div>
         ))}
       </div>

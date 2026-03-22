@@ -24,24 +24,24 @@ const cards = [
 
 const InTheirShoesSection = () => (
   <section className="border-t border-border/30 py-14 md:py-20">
-    <div className="container mx-auto px-6">
+    <div className="container mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="mx-auto mb-8 max-w-xl text-center"
+        className="mx-auto mb-10 max-w-3xl text-center md:mb-12 lg:max-w-4xl"
       >
-        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary">My Approach</p>
-        <h2 className="mb-3 font-display text-2xl font-bold tracking-tight md:text-3xl">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary sm:text-sm">My Approach</p>
+        <h2 className="mb-4 font-display text-3xl font-bold tracking-tight md:text-4xl lg:text-[2.5rem]">
           I've Been in Their Shoes
         </h2>
-        <p className="text-sm text-muted-foreground md:text-base">
+        <p className="text-base text-muted-foreground md:text-lg lg:text-xl">
           My approach comes from hands-on experience living every side of go-to-market.
         </p>
       </motion.div>
 
-      <div className="mx-auto grid max-w-4xl gap-4 md:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-3 lg:max-w-none lg:gap-6">
         {cards.map((card, i) => (
           <motion.div
             key={card.title}
@@ -49,14 +49,14 @@ const InTheirShoesSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.08, duration: 0.5 }}
-            className="flex flex-col rounded-xl border border-border/40 bg-card/80 p-5 transition-all duration-200 hover:border-primary/20 hover:shadow-sm"
+            className="flex flex-col rounded-xl border border-border/40 bg-card/80 p-6 transition-all duration-200 hover:border-primary/20 hover:shadow-sm md:p-7"
           >
-            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
-              <card.icon size={18} />
+            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary md:h-11 md:w-11">
+              <card.icon size={20} />
             </div>
-            <h3 className="mb-1 font-display text-base font-semibold text-foreground">{card.title}</h3>
-            <p className="mb-3 flex-1 text-sm leading-relaxed text-muted-foreground">{card.body}</p>
-            <p className="border-t border-border/30 pt-2.5 text-[11px] font-medium italic text-primary/70">
+            <h3 className="mb-2 font-display text-lg font-semibold text-foreground md:text-xl">{card.title}</h3>
+            <p className="mb-4 flex-1 text-base leading-relaxed text-muted-foreground">{card.body}</p>
+            <p className="border-t border-border/30 pt-3 text-sm font-medium text-primary/80">
               {card.tagline}
             </p>
           </motion.div>
@@ -68,7 +68,7 @@ const InTheirShoesSection = () => (
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="mx-auto mt-8 max-w-lg text-center font-display text-lg font-bold tracking-tight text-foreground md:text-xl"
+        className="mx-auto mt-10 max-w-3xl text-center font-display text-xl font-bold tracking-tight text-foreground md:mt-12 md:max-w-4xl md:text-2xl"
       >
         I know how to turn scattered teams into a{" "}
         <span className="text-gradient">unified GTM engine</span>.
