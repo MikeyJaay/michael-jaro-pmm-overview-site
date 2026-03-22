@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# PMM Portfolio Showcase
 
 TODO: Document your project here
