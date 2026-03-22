@@ -1,15 +1,4 @@
-export interface PortfolioEntry {
-  id: string;
-  slug: string;
-  title: string;
-  category: string;
-  description: string;
-  filePath: string;
-  fileType: string;
-  thumbnail: string;
-  tags: string[];
-  accent: string; // tailwind color class for card accent
-}
+import type { PortfolioEntry, ArtifactCategory } from "@/types/portfolio";
 
 export const landingPages: PortfolioEntry[] = [
   {
@@ -61,13 +50,6 @@ export const landingPages: PortfolioEntry[] = [
     accent: "from-accent/20 to-primary/30",
   },
 ];
-
-export interface ArtifactCategory {
-  slug: string;
-  title: string;
-  description: string;
-  icon: string;
-}
 
 export const artifactCategories: ArtifactCategory[] = [
   { slug: "landing-pages", title: "Landing Pages", description: "Product positioning, conversion strategy, and technical storytelling", icon: "Layout" },

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import type { PortfolioEntry } from "@/data/portfolioData";
+import type { PortfolioEntry } from "@/types/portfolio";
 import { Badge } from "@/components/ui/badge";
 
 interface Props {

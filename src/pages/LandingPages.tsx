@@ -1,4 +1,4 @@
-import LandingPageGallery from "@/components/LandingPageGallery";
+import LandingPageGallery from "@/components/portfolio/LandingPageGallery";
 
 const LandingPages = () => <LandingPageGallery />;
 

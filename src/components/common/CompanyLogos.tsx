@@ -15,7 +15,7 @@ const logos = [
   { name: "Mitratech", src: mitratechLogo },
 ];
 
-const LogoCarousel = () => (
+const CompanyLogos = () => (
   <section className="border-y border-border/40 bg-secondary/20 py-6">
     <p className="mb-3 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
       I've Worked at Companies from Bootstrap Startups to Global Enterprises.
@@ -48,4 +48,4 @@ const LogoCarousel = () => (
   </section>
 );
 
-export default LogoCarousel;
+export default CompanyLogos;
