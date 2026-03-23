@@ -24,6 +24,17 @@ const Footer = () => (
               <a
                 key={link.path}
                 href={link.path}
+                onClick={(e) => {
+                  e.preventDefault();
+                  const id = link.path.replace("/#", "");
+                  const el = document.getElementById(id);
+                  if (el) {
+                    el.scrollIntoView({ behavior: "smooth", block: "start" });
+                    window.history.replaceState(null, "", link.path);
+                  } else {
+                    window.location.href = link.path;
+                  }
+                }}
                 className="text-muted-foreground transition-colors hover:text-foreground"
               >
                 {link.label}
