@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import AppShell from "./components/AppShell";
-import Index from "./pages/Index";
+import AppShell from "./components/layout/AppShell";
+import Home from "./pages/Home";
 import LandingPages from "./pages/LandingPages";
 import CareerTimeline from "./pages/CareerTimeline";
 import ComingSoon from "./pages/ComingSoon";
@@ -20,7 +20,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route element={<AppShell />}>
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<Home />} />
             <Route path="/career" element={<CareerTimeline />} />
             <Route path="/landing-pages" element={<LandingPages />} />
             <Route path="/:category" element={<ComingSoon />} />

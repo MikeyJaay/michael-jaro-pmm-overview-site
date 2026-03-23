@@ -1,8 +1,8 @@
-import HeroSection from "@/components/HeroSection";
-import LogoCarousel from "@/components/LogoCarousel";
-import GtmBreaksSection from "@/components/GtmBreaksSection";
-import InTheirShoesSection from "@/components/InTheirShoesSection";
-import WhatIBuildSection from "@/components/WhatIBuildSection";
+import HeroSection from "@/components/sections/HeroSection";
+import CompanyLogos from "@/components/common/CompanyLogos";
+import GtmBreaksSection from "@/components/sections/GtmBreaksSection";
+import InTheirShoesSection from "@/components/sections/InTheirShoesSection";
+import WhatIBuildSection from "@/components/sections/WhatIBuildSection";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Layout, MessageSquare, FileText, Target } from "lucide-react";
@@ -14,10 +14,10 @@ const workLinks = [
   { label: "Sales Enablement", path: "/sales-enablement", icon: Target, description: "Discovery guides, demo narratives, and objection handling" },
 ];
 
-const Index = () => (
+const Home = () => (
   <>
     <HeroSection />
-    <LogoCarousel />
+    <CompanyLogos />
     <GtmBreaksSection />
     <InTheirShoesSection />
     <WhatIBuildSection />
@@ -57,4 +57,4 @@ const Index = () => (
   </>
 );
 
-export default Index;
+export default Home;
