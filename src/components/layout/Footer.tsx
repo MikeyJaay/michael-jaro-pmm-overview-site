@@ -2,34 +2,67 @@ import { Link } from "react-router-dom";
 
 const navLinks = [
   { label: "Home", path: "/" },
-  { label: "Landing Pages", path: "/landing-pages" },
+  { label: "Work Samples", path: "/#work-samples" },
   { label: "Career Timeline", path: "/career-timeline" },
 ];
 
 const tools = [
   { name: "Lovable", logo: "https://lovable.dev/favicon.ico", url: "https://lovable.dev" },
-  { name: "Claude Code", logo: "https://claude.ai/favicon.ico", url: "https://claude.ai" },
+  { name: "Claude", logo: "https://www.anthropic.com/favicon.ico", url: "https://claude.ai" },
   { name: "VS Code", logo: "https://code.visualstudio.com/favicon.ico", url: "https://code.visualstudio.com" },
   { name: "Figma", logo: "https://static.figma.com/app/icon/1/favicon.png", url: "https://figma.com" },
 ];
 
 const Footer = () => (
   <footer className="border-t border-border/50 bg-card/50">
-    <div className="container mx-auto px-4 py-10 md:py-12">
-      {/* Top row: nav + LinkedIn */}
-      <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-        {/* Mini nav */}
-        <nav className="flex flex-wrap items-center gap-5 text-sm">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className="text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {link.label}
-            </Link>
-          ))}
+    <div className="container mx-auto px-4 py-8">
+      <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+        {/* Nav column */}
+        <nav className="flex flex-col gap-2 text-sm">
+          {navLinks.map((link) =>
+            link.path.startsWith("/#") ? (
+              <a
+                key={link.path}
+                href={link.path}
+                className="text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.path}
+                to={link.path}
+                className="text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {link.label}
+              </Link>
+            )
+          )}
         </nav>
+
+        {/* Made with */}
+        <div className="flex flex-col items-center gap-1.5">
+          <p className="text-xs text-muted-foreground">Made with</p>
+          <div className="flex items-center gap-3">
+            {tools.map((tool) => (
+              <a
+                key={tool.name}
+                href={tool.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-1.5 text-xs text-muted-foreground transition-colors hover:text-foreground"
+                title={tool.name}
+              >
+                <img
+                  src={tool.logo}
+                  alt={tool.name}
+                  className="h-4 w-4 rounded-sm opacity-60 transition-opacity group-hover:opacity-100"
+                />
+                <span>{tool.name}</span>
+              </a>
+            ))}
+          </div>
+        </div>
 
         {/* LinkedIn */}
         <a
@@ -45,35 +78,9 @@ const Footer = () => (
         </a>
       </div>
 
-      {/* Divider */}
-      <div className="my-6 border-t border-border/30" />
-
-      {/* Bottom row: made with */}
-      <div className="flex flex-col items-center gap-3 text-center">
-        <p className="text-xs text-muted-foreground">Made with</p>
-        <div className="flex items-center gap-4">
-          {tools.map((tool) => (
-            <a
-              key={tool.name}
-              href={tool.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-1.5 text-xs text-muted-foreground transition-colors hover:text-foreground"
-              title={tool.name}
-            >
-              <img
-                src={tool.logo}
-                alt={tool.name}
-                className="h-4 w-4 rounded-sm opacity-60 transition-opacity group-hover:opacity-100"
-              />
-              <span className="hidden sm:inline">{tool.name}</span>
-            </a>
-          ))}
-        </div>
-        <p className="mt-2 text-[11px] text-muted-foreground/60">
-          © {new Date().getFullYear()} MJ Portfolio
-        </p>
-      </div>
+      <p className="mt-4 text-center text-[11px] text-muted-foreground/60">
+        © {new Date().getFullYear()} MJ Portfolio
+      </p>
     </div>
   </footer>
 );
