@@ -23,7 +23,7 @@ const Home = () => (
     <WhatIBuildSection />
 
     {/* Work Samples quick links */}
-    <section className="border-t border-border/30 py-14 md:py-20">
+    <section id="work-samples" className="border-t border-border/30 py-14 md:py-20">
       <div className="container mx-auto">
         <div className="mb-8 text-center md:mb-10">
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary sm:text-sm">Explore</p>
