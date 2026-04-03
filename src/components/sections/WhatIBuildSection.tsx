@@ -4,7 +4,7 @@ import { MessageSquareText, Rocket, Target, Shield } from "lucide-react";
 const cards = [
   { icon: MessageSquareText, title: "Messaging & Positioning", body: "Positioning built from product truth, competitive pressure, and buyer reality — designed to hold up in real conversations." },
   { icon: Rocket, title: "Launch Strategy", body: "End-to-end launch systems that drive alignment across product, marketing, and sales — from narrative through execution." },
-  { icon: Target, title: "Sales Enablement", body: "Sales narratives and assets built from real objections and deal dynamics — not theoretical messaging." },
+  { icon: Target, title: "Sales Enablement", body: "Sales frameworks, narratives and assets built from real objections, deal dynamics, and quota carrying experince." },
   { icon: Shield, title: "Technical PMM (AI / Security)", body: "Complex AI and platform systems translated into narratives that stand up in enterprise and security-driven evaluations." },
 ];
 

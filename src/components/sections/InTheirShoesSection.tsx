@@ -34,10 +34,10 @@ const InTheirShoesSection = () => (
       >
         <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary sm:text-sm">My Approach</p>
         <h2 className="mb-4 font-display text-3xl font-bold tracking-tight md:text-4xl lg:text-[2.5rem]">
-          I've Been in Their Shoes
+          Strategic Empathy
         </h2>
         <p className="text-base text-muted-foreground md:text-lg lg:text-xl">
-          My approach comes from hands-on experience living every side of go-to-market.
+          I've been in their shoes. My approach comes from hands-on experience living every side of go-to-market.
         </p>
       </motion.div>
 
@@ -70,7 +70,7 @@ const InTheirShoesSection = () => (
         transition={{ duration: 0.5, delay: 0.3 }}
         className="mx-auto mt-10 max-w-3xl text-center font-display text-xl font-bold tracking-tight text-foreground md:mt-12 md:max-w-4xl md:text-2xl"
       >
-        I know how to turn scattered teams into a{" "}
+        My passion is briding cross-deparment teams to create a{" "}
         <span className="text-gradient">unified GTM engine</span>.
       </motion.p>
     </div>
