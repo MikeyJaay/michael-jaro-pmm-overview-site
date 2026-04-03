@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { Box, Megaphone, Handshake } from "lucide-react";
 
 const cards = [
-  { icon: Box, title: "Product", body: "Builds what's technically possible", sub: "not always what the market needs" },
-  { icon: Megaphone, title: "Marketing", body: "Creates messaging that sounds right", sub: "but doesn't hold up in sales calls" },
-  { icon: Handshake, title: "Sales", body: "Handles objections and realities", sub: "no one else sees upstream" },
+  { icon: Box, title: "Product", body: "Builds what's technically possible", sub: "but not always what the market needs" },
+  { icon: Megaphone, title: "Marketing", body: "Creates messaging that sounds punchy", sub: "but doesn't hold up in sales calls" },
+  { icon: Handshake, title: "Sales", body: "Handles objections and realities", sub: "that no one else sees upstream" },
 ];
 
 const GtmBreaksSection = () => (
@@ -47,7 +47,7 @@ const GtmBreaksSection = () => (
         transition={{ duration: 0.5, delay: 0.3 }}
         className="mt-10 text-center font-display text-xl font-bold tracking-tight text-foreground md:mt-12 md:text-2xl"
       >
-        GTM Fails from Misaligned Teams.
+        GTM Doesn't Fail from Lack of Talent. It Fails from Misaligned Teams.
       </motion.p>
     </div>
   </section>
