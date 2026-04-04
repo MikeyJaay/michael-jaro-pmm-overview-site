@@ -77,7 +77,7 @@ const Navbar = () => {
             className="relative rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-foreground"
             style={{ color: location.pathname === "/writing" ? "hsl(var(--foreground))" : "hsl(var(--muted-foreground))" }}
           >
-            Blog
+            Writing
             {location.pathname === "/writing" && (
               <motion.div
                 layoutId="nav-indicator"
