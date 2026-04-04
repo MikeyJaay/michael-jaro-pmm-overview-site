@@ -1,14 +1,6 @@
-import { Link } from "react-router-dom";
-
-const navLinks = [
-  { label: "Home", path: "/" },
-  { label: "Work Samples", path: "/#work-samples" },
-  { label: "Career Timeline", path: "/career-timeline" },
-];
-
 const tools = [
   { name: "Lovable", logo: "https://lovable.dev/favicon.ico"},
-  { name: "Claude", logo: "https://www.anthropic.com/favicon.ico"},
+  { name: "Claude Code", logo: "https://www.anthropic.com/favicon.ico"},
   { name: "VS Code", logo: "https://code.visualstudio.com/favicon.ico" },
   // { name: "Figma", logo: "https://static.figma.com/app/icon/1/favicon.png", url: "https://figma.com" },
 ];
@@ -16,42 +8,8 @@ const tools = [
 const Footer = () => (
   <footer className="border-t border-border/50 bg-card/50">
     <div className="container mx-auto px-4 py-8">
-      <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
-        {/* Nav column */}
-        <nav className="flex flex-col gap-2 text-sm">
-          {navLinks.map((link) =>
-            link.path.startsWith("/#") ? (
-              <a
-                key={link.path}
-                href={link.path}
-                onClick={(e) => {
-                  e.preventDefault();
-                  const id = link.path.replace("/#", "");
-                  const el = document.getElementById(id);
-                  if (el) {
-                    el.scrollIntoView({ behavior: "smooth", block: "start" });
-                    window.history.replaceState(null, "", link.path);
-                  } else {
-                    window.location.href = link.path;
-                  }
-                }}
-                className="text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {link.label}
-              </a>
-            ) : (
-              <Link
-                key={link.path}
-                to={link.path}
-                className="text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {link.label}
-              </Link>
-            )
-          )}
-        </nav>
-
-        {/* Made with */}
+      <div className="relative flex items-center justify-center">
+        {/* Made with — centered */}
         <div className="flex flex-col items-center gap-1.5">
           <p className="text-xs text-muted-foreground">Made with</p>
           <div className="flex items-center gap-3">
@@ -75,12 +33,12 @@ const Footer = () => (
           </div>
         </div>
 
-        {/* LinkedIn */}
+        {/* LinkedIn — pinned right */}
         <a
           href="https://www.linkedin.com/in/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-primary/10 hover:text-primary"
+          className="absolute right-0 flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-primary/10 hover:text-primary"
           aria-label="LinkedIn Profile"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
