@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import LandingPages from "./pages/LandingPages";
 import CareerTimeline from "./pages/CareerTimeline";
 import ComingSoon from "./pages/ComingSoon";
+import Writing from "./pages/Writing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
             <Route path="/" element={<Home />} />
             <Route path="/career" element={<CareerTimeline />} />
             <Route path="/landing-pages" element={<LandingPages />} />
+            <Route path="/writing" element={<Writing />} />
             <Route path="/:category" element={<ComingSoon />} />
           </Route>
           <Route path="*" element={<NotFound />} />
