@@ -47,8 +47,9 @@ const GtmBreaksSection = () => (
         transition={{ duration: 0.5, delay: 0.3 }}
         className="mt-10 text-center font-display text-xl font-bold tracking-tight text-foreground md:mt-12 md:text-2xl"
       >
-        GTM Doesn't Fail from Lack of Talent. It Fails from Misaligned Teams.
+        GTM Doesn't Fail from <span className="text-gradient">Lack of Talent.</span> It Fails from <span className="text-gradient">Misaligned Teams.</span>
       </motion.p>
+      
     </div>
   </section>
 );
