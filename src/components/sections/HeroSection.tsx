@@ -56,12 +56,12 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: 24 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
-            className="hidden md:flex md:w-[42%] lg:w-[45%] xl:w-[48%] shrink-0 items-start justify-center"
+            className="flex justify-center mt-2 md:mt-0 md:w-[42%] lg:w-[45%] xl:w-[48%] shrink-0 items-start"
           >
             <img
               src="/home-page-images/robot-bridge.png"
               alt="Robot on a bridge"
-              className="w-auto max-h-[22rem] object-contain"
+              className="w-auto max-h-48 md:max-h-[22rem] object-contain"
             />
           </motion.div>
 
