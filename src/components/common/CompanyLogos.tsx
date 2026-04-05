@@ -18,7 +18,7 @@ const logos = [
 const CompanyLogos = () => (
   <section className="border-y border-border/40 bg-secondary/30 py-8">
     <p className="mb-5 px-6 text-center text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground/70">
-      Companies I've helped go to market
+      I've worked at companies from bootstrap startups to global enterprises.
     </p>
 
     {/* Mobile — auto-scrolling marquee */}

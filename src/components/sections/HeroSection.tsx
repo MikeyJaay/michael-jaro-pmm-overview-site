@@ -16,7 +16,7 @@ const HeroSection = () => (
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           >
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-primary sm:text-sm">
-              Product Marketing Manager
+              Michael Jaroszynski
             </p>
             <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl">
               Bridging the Gap Between…
