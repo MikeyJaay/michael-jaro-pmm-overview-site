@@ -23,15 +23,15 @@ const CompanyLogos = () => (
 
     {/* Mobile — auto-scrolling marquee */}
     <div className="md:hidden overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
-      <div className="flex w-max animate-marquee items-center gap-x-10 hover:[animation-play-state:paused]">
+      <div className="flex w-max animate-marquee items-center gap-x-6 pointer-events-none">
         {[...logos, ...logos].map((logo, i) => (
-          <div key={i} className="flex w-[120px] shrink-0 items-center justify-center">
+          <div key={i} className="flex w-[140px] shrink-0 items-center justify-center">
             <img
               src={logo.src}
               alt={logo.name}
               loading="eager"
               decoding="async"
-              className="h-10 w-auto max-w-[110px] object-contain opacity-60"
+              className="h-14 w-auto max-w-[130px] object-contain opacity-60"
             />
           </div>
         ))}
