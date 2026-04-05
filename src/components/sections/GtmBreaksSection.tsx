@@ -1,55 +1,96 @@
 import { motion } from "framer-motion";
-import { Box, Megaphone, Handshake } from "lucide-react";
 
-const cards = [
-  { icon: Box, title: "Product", body: "Builds what's technically possible", sub: "but not always what the market needs" },
-  { icon: Megaphone, title: "Marketing", body: "Creates messaging that sounds punchy", sub: "but doesn't hold up in sales calls" },
-  { icon: Handshake, title: "Sales", body: "Handles objections and realities", sub: "that no one else sees upstream" },
+const columns = [
+  {
+    label: "Product",
+    body: "Builds what's possible.",
+    sub: "But not always what the market is ready to buy.",
+  },
+  {
+    label: "Marketing",
+    body: "Creates messaging that sounds good.",
+    sub: "But doesn't always survive a real sales conversation.",
+  },
+  {
+    label: "Sales",
+    body: "Lives closest to buyer friction.",
+    sub: "But usually gets looped in too late to shape the story upstream.",
+  },
 ];
 
 const GtmBreaksSection = () => (
-  <section className="py-14 md:py-20">
+  <section className="bg-dark-section py-14 md:py-20">
     <div className="container mx-auto">
-      <motion.h2
+
+      <motion.div
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="mb-8 font-display text-3xl font-bold tracking-tight md:mb-10 md:text-4xl lg:text-[2.5rem]"
+        className="mb-10 md:mb-14"
       >
-        Where GTM Breaks
-      </motion.h2>
+        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary sm:text-sm">
+          The Real Problem
+        </p>
+        <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl lg:text-[2.5rem]">
+          Where GTM Actually Breaks
+        </h2>
+      </motion.div>
 
-      <div className="grid gap-5 sm:grid-cols-3 lg:gap-6">
-        {cards.map((card, i) => (
+      {/* Three-column system map with connector chevrons */}
+      <div className="relative grid md:grid-cols-3">
+        {columns.map((col, i) => (
           <motion.div
-            key={card.title}
-            initial={{ opacity: 0, y: 16 }}
+            key={col.label}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.08, duration: 0.5 }}
-            className="rounded-xl border border-border/40 bg-card/80 p-6 transition-all duration-200 hover:border-primary/20 hover:shadow-sm md:p-7"
+            transition={{ delay: i * 0.12, duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+            className={[
+              "relative rounded-xl border border-white/10 bg-white/5 p-6 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:py-8",
+              i < columns.length - 1
+                ? "mb-4 md:mb-0 md:border-r md:border-white/10 md:pr-10"
+                : "",
+              i > 0 ? "md:pl-10" : "",
+            ].join(" ")}
           >
-            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary md:h-11 md:w-11">
-              <card.icon size={20} />
-            </div>
-            <h3 className="mb-2 font-display text-lg font-semibold text-foreground md:text-xl">{card.title}</h3>
-            <p className="text-base leading-relaxed text-foreground/80">{card.body}</p>
-            <p className="mt-1.5 text-sm italic text-muted-foreground">({card.sub})</p>
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">
+              {col.label}
+            </p>
+            <p className="text-xl font-semibold leading-snug text-white md:text-2xl">
+              {col.body}
+            </p>
+            <p className="mt-3 text-base text-white/50">
+              <span className="mr-1.5 text-white/20">—</span>
+              <span className="italic">{col.sub}</span>
+            </p>
+
+            {/* Connector chevron — desktop only */}
+            {i < columns.length - 1 && (
+              <div className="absolute right-0 top-1/2 hidden -translate-y-1/2 translate-x-1/2 md:flex">
+                <div className="flex h-5 w-5 items-center justify-center rounded-full border border-white/20 bg-white/10">
+                  <span className="text-[9px] leading-none text-white/40">›</span>
+                </div>
+              </div>
+            )}
           </motion.div>
         ))}
       </div>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+      {/* Closing statement */}
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className="mt-10 text-center font-display text-xl font-bold tracking-tight text-foreground md:mt-12 md:text-2xl"
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="mt-10 rounded-xl border-l-4 border-primary bg-white/5 px-8 py-8 md:mt-14 md:px-10 md:py-10"
       >
-        GTM Doesn't Fail from <span className="text-gradient">Lack of Talent.</span> It Fails from <span className="text-gradient">Misaligned Teams.</span>
-      </motion.p>
-      
+        <p className="text-2xl font-bold leading-snug tracking-tight text-white md:text-3xl lg:text-[2rem]">
+          Go-to-market rarely fails because teams are weak.{" "}
+          <span className="text-primary/90">It fails because they're misaligned.</span>
+        </p>
+      </motion.div>
+
     </div>
   </section>
 );

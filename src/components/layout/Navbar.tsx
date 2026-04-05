@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="container mx-auto flex h-16 items-center justify-between">
-        <Link to="/" className="font-display text-lg font-bold tracking-tight text-foreground">
+        <Link to="/" className="text-lg font-bold tracking-tight text-foreground">
           MJ<span className="text-gradient">Portfolio</span>
         </Link>
 

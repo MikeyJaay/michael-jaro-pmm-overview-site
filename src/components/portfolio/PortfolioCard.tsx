@@ -44,7 +44,7 @@ const PortfolioCard = ({ entry, index, isHovered, animateProps, zIndex, onHover,
 
         <div className="p-4">
           <p className="mb-1 text-xs font-medium uppercase tracking-wider text-primary">{entry.category}</p>
-          <h3 className="mb-1.5 font-display text-sm font-semibold leading-snug text-foreground">{entry.title}</h3>
+          <h3 className="mb-1.5 text-sm font-semibold leading-snug text-foreground">{entry.title}</h3>
           <p className="mb-3 text-[11px] leading-relaxed text-muted-foreground line-clamp-2">{entry.description}</p>
           <div className="flex flex-wrap gap-1.5">
             {entry.tags.map((tag) => (

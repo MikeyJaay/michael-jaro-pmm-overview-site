@@ -23,7 +23,7 @@ const LandingPageGallery = () => {
             <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary md:text-base">
               Artifact Showcase
             </p>
-            <h1 className="font-display text-3xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+            <h1 className="text-3xl font-bold tracking-tight md:text-5xl lg:text-6xl">
               Landing Pages
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground md:text-lg lg:max-w-3xl">
@@ -53,7 +53,7 @@ const LandingPageGallery = () => {
                   </div>
                   <div className="p-4">
                     <p className="mb-1 text-xs font-medium uppercase tracking-wider text-primary">{entry.category}</p>
-                    <h3 className="mb-1.5 font-display text-sm font-semibold leading-snug text-foreground">{entry.title}</h3>
+                    <h3 className="mb-1.5 text-sm font-semibold leading-snug text-foreground">{entry.title}</h3>
                     <p className="mb-3 text-[11px] leading-relaxed text-muted-foreground line-clamp-2">{entry.description}</p>
                     <div className="flex flex-wrap gap-1.5">
                       {entry.tags.map((tag) => (
@@ -85,7 +85,7 @@ const LandingPageGallery = () => {
                   </div>
                   <div className="p-5">
                     <p className="mb-1 text-xs font-medium uppercase tracking-wider text-primary">{entry.category}</p>
-                    <h3 className="mb-1.5 font-display text-base font-semibold text-foreground">{entry.title}</h3>
+                    <h3 className="mb-1.5 text-base font-semibold text-foreground">{entry.title}</h3>
                     <p className="mb-3 text-xs text-muted-foreground line-clamp-2">{entry.description}</p>
                     <div className="flex flex-wrap gap-1.5">
                       {entry.tags.map((tag) => (
