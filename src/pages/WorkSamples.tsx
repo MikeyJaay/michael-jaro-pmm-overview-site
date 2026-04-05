@@ -78,14 +78,13 @@ const WorkSamples = () => (
             initial={{ opacity: 0, x: 24 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
-            className="hidden md:flex md:w-[42%] lg:w-[45%] xl:w-[48%] shrink-0 items-center justify-center"
+            className="hidden md:flex md:w-[42%] lg:w-[45%] xl:w-[48%] shrink-0 items-start justify-center"
           >
-            <div className="relative w-full aspect-[4/3] rounded-2xl border border-primary/15 bg-secondary/60 flex items-center justify-center overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
-              <p className="relative text-sm font-medium text-muted-foreground/50 tracking-wide">
-                [ Graphic Placeholder ]
-              </p>
-            </div>
+            <img
+              src="/home-page-images/robot-pen.png"
+              alt="Robot with pen"
+              className="w-auto max-h-[22rem] object-contain"
+            />
           </motion.div>
 
         </div>
