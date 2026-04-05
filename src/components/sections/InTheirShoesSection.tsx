@@ -1,78 +1,73 @@
 import { motion } from "framer-motion";
-import { TrendingUp, Code2, Rocket } from "lucide-react";
 
-const cards = [
-  {
-    icon: TrendingUp,
-    title: "Sales",
-    body: "As a top-performing sales rep, I've run discovery, handled objections, generated pipeline, and built outbound motions from the ground up.",
-    tagline: "I know what moves deals forward — and how the weight of a quota feels.",
-  },
-  {
-    icon: Code2,
-    title: "Product Management",
-    body: "I've worked side-by-side with engineering and hard coded fullstack applications myself.",
-    tagline: "I understand what it takes to build a product 0 → 1.",
-  },
-  {
-    icon: Rocket,
-    title: "Product Marketing",
-    body: "I've aligned product, marketing, and sales into one GTM system — turning positioning, launches, and enablement into coordinated motions that shift markets.",
-    tagline: "I know how to turn strategy into market traction.",
-  },
+const paragraphs = [
+  "I've seen go-to-market from the inside.",
+  "Not just from a messaging doc — but from discovery calls, launch pressure, technical build conversations, and the realities that show up when strategy meets the market.",
+  "That's what shaped how I work.",
+  "I don't think strong GTM comes from louder messaging or more deliverables.",
+  "I think it comes from understanding how each team sees the problem — and building a system they can actually move through together.",
 ];
 
 const InTheirShoesSection = () => (
-  <section className="border-t border-border/30 py-14 md:py-20">
+  <section className="border-t border-border/30 py-14 md:py-24">
     <div className="container mx-auto">
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="mx-auto mb-10 max-w-3xl text-center md:mb-12 lg:max-w-4xl"
-      >
-        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary sm:text-sm">My Approach</p>
-        <h2 className="mb-4 font-display text-3xl font-bold tracking-tight md:text-4xl lg:text-[2.5rem]">
-          Strategic Empathy
-        </h2>
-        <p className="text-base text-muted-foreground md:text-lg lg:text-xl">
-          I've been in their shoes. My approach comes from hands-on experience living every side of go-to-market.
-        </p>
-      </motion.div>
+      <div className="md:grid md:grid-cols-[2fr_3fr] md:items-start md:gap-16 lg:gap-20">
 
-      <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-3 lg:max-w-none lg:gap-6">
-        {cards.map((card, i) => (
-          <motion.div
-            key={card.title}
-            initial={{ opacity: 0, y: 16 }}
+        {/* Left — heading */}
+        <motion.div
+          initial={{ opacity: 0, x: -16 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-10 md:mb-0 md:sticky md:top-28"
+        >
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary sm:text-sm">
+            My Approach
+          </p>
+          <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-4xl lg:text-[2.5rem]">
+            Strategic Empathy
+          </h2>
+        </motion.div>
+
+        {/* Right — content */}
+        <div>
+          {/* Staggered paragraphs */}
+          <div className="space-y-5 border-l-2 border-primary/20 pl-8 md:pl-10">
+            {paragraphs.map((p, i) => (
+              <motion.p
+                key={i}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.07, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                className={
+                  i === 0
+                    ? "text-base font-semibold leading-relaxed text-foreground md:text-lg"
+                    : "text-base leading-relaxed text-muted-foreground md:text-lg"
+                }
+              >
+                {p}
+              </motion.p>
+            ))}
+          </div>
+
+          {/* Pull quote */}
+          <motion.blockquote
+            initial={{ opacity: 0, y: 8 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.08, duration: 0.5 }}
-            className="flex flex-col rounded-xl border border-border/40 bg-card/80 p-6 transition-all duration-200 hover:border-primary/20 hover:shadow-sm md:p-7"
+            transition={{ duration: 0.6, delay: 0.42 }}
+            className="mt-10 rounded-xl border-l-4 border-primary bg-secondary/60 px-6 py-5 md:px-8 md:py-6"
           >
-            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary md:h-11 md:w-11">
-              <card.icon size={20} />
-            </div>
-            <h3 className="mb-2 font-display text-lg font-semibold text-foreground md:text-xl">{card.title}</h3>
-            <p className="mb-4 flex-1 text-base leading-relaxed text-muted-foreground">{card.body}</p>
-            <p className="border-t border-border/30 pt-3 text-sm font-medium text-primary/80">
-              {card.tagline}
+            <p className="text-lg font-semibold italic leading-snug text-foreground md:text-xl lg:text-[1.35rem]">
+              "The best product marketing doesn't just tell a story.
+              <br />
+              It creates alignment around one."
             </p>
-          </motion.div>
-        ))}
-      </div>
+          </motion.blockquote>
+        </div>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className="mx-auto mt-10 max-w-3xl text-center font-display text-xl font-bold tracking-tight text-foreground md:mt-12 md:max-w-4xl md:text-2xl"
-      >
-        My passion is briding cross-deparment teams to create a{" "}
-        <span className="text-gradient">unified GTM engine</span>.
-      </motion.p>
+      </div>
     </div>
   </section>
 );

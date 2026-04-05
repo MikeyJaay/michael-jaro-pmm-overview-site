@@ -208,7 +208,7 @@ const CareerTimeline = () => {
         <div className="mx-auto max-w-3xl">
           <div ref={headerRef}>
             <h1
-              className={`font-display text-4xl font-bold text-foreground md:text-5xl transition-all duration-700 ${
+              className={`text-4xl font-bold text-foreground md:text-5xl transition-all duration-700 ${
                 headerVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-6"

@@ -16,9 +16,9 @@ const logos = [
 ];
 
 const CompanyLogos = () => (
-  <section className="border-y border-border/40 bg-secondary/20 py-6">
-    <p className="mb-3 px-6 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-      I've Worked at Companies from Bootstrap Startups to Global Enterprises.
+  <section className="border-y border-border/40 bg-secondary/30 py-8">
+    <p className="mb-5 px-6 text-center text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground/70">
+      Companies I've helped go to market
     </p>
 
     {/* Mobile — auto-scrolling marquee */}
