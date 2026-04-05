@@ -60,53 +60,72 @@ const TimelineCard = ({
   item: (typeof timelineData)[0];
   index: number;
   isLast: boolean;
-}) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-60px" }}
-    transition={{ delay: index * 0.08, duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-    className="relative flex gap-6 md:gap-8"
-  >
-    {/* Left — timeline spine */}
-    <div className="flex flex-col items-center">
-      <div className="mt-1.5 h-3 w-3 shrink-0 rounded-full border-2 border-primary bg-background ring-4 ring-primary/10" />
-      {!isLast && <div className="mt-1 flex-1 w-px bg-border/60" />}
-    </div>
+}) => {
+  const isEven = index % 2 === 0;
 
-    {/* Right — card */}
-    <div className={`w-full pb-10 ${isLast ? "pb-0" : ""}`}>
-      <div className="group rounded-xl border border-border/50 bg-card p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-[0_8px_30px_-4px_hsl(221_83%_53%/0.10)] md:p-8">
-
-        {/* Header row — blue bar + period + title on left, logo on right */}
-        <div className="flex items-start justify-between gap-6">
-          <div className="flex-1 min-w-0">
-            <div className="mb-3 h-1 w-8 rounded-full bg-primary" />
-            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">
-              {item.period}
-            </p>
-            <h3 className="mt-1.5 text-lg font-bold text-foreground md:text-xl">
-              {item.role}
-            </h3>
-          </div>
-
-          <img
-            src={item.logo}
-            alt={item.company}
-            className="h-10 w-auto max-w-[180px] shrink-0 object-contain object-right opacity-70 transition-opacity group-hover:opacity-100 md:h-[4.5rem] md:max-w-[220px]"
-            loading="lazy"
-          />
+  const cardContent = (
+    <div className="group rounded-xl border border-border/50 bg-card p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-[0_8px_30px_-4px_hsl(221_83%_53%/0.10)] md:p-8">
+      {/* Header row — blue bar + period + title on left, logo on right */}
+      <div className="flex items-start justify-between gap-6">
+        <div className="flex-1 min-w-0">
+          <div className="mb-3 h-1 w-8 rounded-full bg-primary" />
+          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">
+            {item.period}
+          </p>
+          <h3 className="mt-1.5 text-lg font-bold text-foreground md:text-xl">
+            {item.role}
+          </h3>
         </div>
-
-        {/* Summary — full width below */}
-        <p className="mt-5 text-sm leading-relaxed text-muted-foreground md:text-base">
-          {item.summary}
-        </p>
-
+        <img
+          src={item.logo}
+          alt={item.company}
+          className="h-10 w-auto max-w-[180px] shrink-0 object-contain object-right opacity-70 transition-opacity group-hover:opacity-100 md:h-[4.5rem] md:max-w-[220px]"
+          loading="lazy"
+        />
       </div>
+      {/* Summary — full width below */}
+      <p className="mt-5 text-sm leading-relaxed text-muted-foreground md:text-base">
+        {item.summary}
+      </p>
     </div>
-  </motion.div>
-);
+  );
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ delay: index * 0.08, duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+    >
+      {/* Mobile layout — left spine + card (unchanged) */}
+      <div className="flex gap-6 md:hidden">
+        <div className="flex flex-col items-center">
+          <div className="mt-1.5 h-3 w-3 shrink-0 rounded-full border-2 border-primary bg-background ring-4 ring-primary/10" />
+          {!isLast && <div className="mt-1 flex-1 w-px bg-border/60" />}
+        </div>
+        <div className={`w-full ${isLast ? "" : "pb-10"}`}>
+          {cardContent}
+        </div>
+      </div>
+
+      {/* Desktop layout — centered spine, alternating left/right */}
+      <div className={`hidden md:grid md:grid-cols-[1fr_2rem_1fr] ${isLast ? "" : "md:pb-10"}`}>
+        {/* Left slot */}
+        <div className="pr-8">
+          {isEven && cardContent}
+        </div>
+        {/* Center spine — dot only, continuous line is in parent */}
+        <div className="flex justify-center">
+          <div className="relative z-10 mt-8 h-3 w-3 shrink-0 rounded-full border-2 border-primary bg-background ring-4 ring-primary/10" />
+        </div>
+        {/* Right slot */}
+        <div className="pl-8">
+          {!isEven && cardContent}
+        </div>
+      </div>
+    </motion.div>
+  );
+};
 
 const CareerTimeline = () => {
   const [sortOrder, setSortOrder] = useState<"oldest" | "newest">("oldest");
@@ -224,7 +243,9 @@ const CareerTimeline = () => {
           </motion.div>
 
           {/* Entries */}
-          <div className="max-w-3xl">
+          <div className="relative max-w-3xl md:max-w-none">
+            {/* Desktop-only continuous center spine line */}
+            <div className="absolute hidden md:block left-1/2 top-[2.375rem] bottom-[2.375rem] w-px -translate-x-1/2 bg-border/60" />
             {sortedData.map((item, index) => (
               <TimelineCard
                 key={`${sortOrder}-${item.company}`}
