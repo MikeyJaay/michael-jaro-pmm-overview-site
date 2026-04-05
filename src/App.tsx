@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import AppShell from "./components/layout/AppShell";
+import ScrollToTop from "./components/common/ScrollToTop";
 import Home from "./pages/Home";
 // import LandingPages from "./pages/LandingPages";
 import CareerTimeline from "./pages/CareerTimeline";
@@ -20,6 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route element={<AppShell />}>
             <Route path="/" element={<Home />} />
