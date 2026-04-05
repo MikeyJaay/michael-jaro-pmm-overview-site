@@ -21,14 +21,14 @@ export const blogPosts: BlogPost[] = [
     thumbnail: "/blog-thumbnails/ai-automation-mitratech.jpg",
   },
   {
-    title: "How to be a Successful Technical Recruiter in a Competitive Market",
-    publication: "Codility",
+    title: "Apple's AI Call Screening: 2019 Late",
+    publication: "Wix Blog",
     description:
-      "A practical breakdown of what separates high-performing technical recruiters from the rest — from understanding engineering roles to building a repeatable candidate pipeline.",
-    date: "2022",
-    url: "https://www.codility.com/blog/how-to-be-a-successful-technical-recruiter/",
-    category: "Company Post",
-    thumbnail: "/blog-thumbnails/tech-hiring.jpg",
+      "A take on Apple's AI call screening announcement disecting the implications of GTM leaders relying on legacy outbound tactis and failing to acknowledge Android users have had this feature for years.",
+    date: "2024",
+    url: "https://michaeljaroszynski.wixsite.com/pmm-blog/post/apple-s-ai-call-screening-so-2019-late",
+    category: "SaaS Thought Leadership",
+    thumbnail: "/blog-thumbnails/ai-call-screening.jpg",
   },
   {
     title: "Falcon for XIoT Datasheet",
@@ -61,14 +61,14 @@ export const blogPosts: BlogPost[] = [
     thumbnail: "/blog-thumbnails/last-of-us.jpg",
   },
   {
-    title: "Apple's AI Call Screening: 2019 Late",
-    publication: "Wix Blog",
+    title: "How to be a Successful Technical Recruiter in a Competitive Market",
+    publication: "Codility",
     description:
-      "A take on Apple's AI call screening announcement disecting the implications of GTM leaders relying on legacy outbound tactis and failing to acknowledge Android users have had this feature for years.",
-    date: "2024",
-    url: "https://michaeljaroszynski.wixsite.com/pmm-blog/post/apple-s-ai-call-screening-so-2019-late",
-    category: "SaaS Thought Leadership",
-    thumbnail: "/blog-thumbnails/ai-call-screening.jpg",
+      "A practical breakdown of what separates high-performing technical recruiters from the rest — from understanding engineering roles to building a repeatable candidate pipeline.",
+    date: "2022",
+    url: "https://www.codility.com/blog/how-to-be-a-successful-technical-recruiter/",
+    category: "Company Post",
+    thumbnail: "/blog-thumbnails/tech-hiring.jpg",
   },
 ];
 
