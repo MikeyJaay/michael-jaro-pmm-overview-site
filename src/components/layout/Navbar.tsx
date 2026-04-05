@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -6,6 +6,13 @@ import { Menu, X } from "lucide-react";
 const Navbar = () => {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const links = [
     { label: "Home", path: "/" },
@@ -15,8 +22,15 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
-      <div className="container mx-auto flex h-16 items-center justify-between">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-4">
+      {/* Pill container */}
+      <div
+        className={`mx-auto max-w-4xl rounded-full px-5 h-14 flex items-center justify-between transition-all duration-300 ${
+          scrolled
+            ? "bg-background/90 backdrop-blur-xl border border-border/60 shadow-sm"
+            : "bg-transparent border border-transparent"
+        }`}
+      >
         <Link to="/" className="font-display text-lg font-bold tracking-tight text-foreground">
           MJ<span className="text-gradient">Portfolio</span>
         </Link>
@@ -34,7 +48,7 @@ const Navbar = () => {
               {location.pathname === link.path && (
                 <motion.div
                   layoutId="nav-indicator"
-                  className="absolute inset-x-1 -bottom-[17px] h-[2px] bg-primary"
+                  className="absolute inset-x-1 -bottom-[2px] h-[2px] bg-primary"
                   transition={{ type: "spring", stiffness: 400, damping: 30 }}
                 />
               )}
@@ -48,22 +62,23 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — drops below pill */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden border-b border-border/50 bg-background/95 backdrop-blur-xl md:hidden"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2 }}
+            className="mx-auto mt-2 max-w-4xl overflow-hidden rounded-2xl border border-border/60 bg-background/95 backdrop-blur-xl shadow-sm md:hidden"
           >
-            <div className="container flex flex-col gap-1 py-4">
+            <div className="flex flex-col gap-1 p-3">
               {links.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-md px-3 py-2.5 text-sm font-medium transition-colors hover:bg-secondary"
+                  className="rounded-xl px-4 py-2.5 text-sm font-medium transition-colors hover:bg-secondary"
                   style={{ color: location.pathname === link.path ? "hsl(var(--foreground))" : "hsl(var(--muted-foreground))" }}
                 >
                   {link.label}
