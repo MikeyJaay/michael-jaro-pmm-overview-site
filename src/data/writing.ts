@@ -36,7 +36,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Product datasheet for Falcon for XIoT, CrowdStrike's extended internet of things (IoT) security solution portecting operational, industrial, medical, and critical infrastructure environments.",
     date: "2024",
-    url: "/blog-thumbnails/Falcon-for-XIoT-datasheet-full.pdf",
+    url: "/documents/Falcon-for-XIoT-datasheet-full.pdf",
     category: "Company Post",
     thumbnail: "/blog-thumbnails/CrowdStrike-XIOT-Datasheet.png",
   },

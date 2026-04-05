@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import MagneticButton from "@/components/common/MagneticButton";
 
 const artifacts = [
   "Messaging & Positioning",
@@ -64,11 +64,9 @@ const WorkSamples = () => (
         transition={{ duration: 0.7, delay: 0.24, ease: [0.16, 1, 0.3, 1] }}
         className="mt-8"
       >
-        <Button asChild size="lg" className="gap-2 rounded-full px-8 py-5 text-sm md:text-base">
-          <a href="https://www.linkedin.com/in/michaeljaro/" target="_blank" rel="noopener noreferrer">
-            Connect on LinkedIn <ArrowRight size={15} />
-          </a>
-        </Button>
+        <MagneticButton href="https://www.linkedin.com/in/michaeljaro/">
+          Connect on LinkedIn <ArrowRight size={15} />
+        </MagneticButton>
       </motion.div>
     </div>
   </section>

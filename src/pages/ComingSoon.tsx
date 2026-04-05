@@ -1,3 +1,4 @@
+// STAGED FOR V2 — Route disabled in App.tsx. Re-enable /:category route when sub-pages are ready.
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { artifactCategories } from "@/data/portfolioData";
