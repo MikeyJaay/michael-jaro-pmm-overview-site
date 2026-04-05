@@ -3,16 +3,16 @@ import CompanyLogos from "@/components/common/CompanyLogos";
 import GtmBreaksSection from "@/components/sections/GtmBreaksSection";
 import InTheirShoesSection from "@/components/sections/InTheirShoesSection";
 import WhatIBuildSection from "@/components/sections/WhatIBuildSection";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { Layout, MessageSquare, FileText, Target } from "lucide-react";
+// import { motion } from "framer-motion";
+// import { Link } from "react-router-dom";
+// import { Layout, MessageSquare, FileText, Target } from "lucide-react";
 
-const workLinks = [
-  { label: "Landing Pages", path: "/landing-pages", icon: Layout, description: "Product positioning, conversion strategy, and technical storytelling" },
-  { label: "Messaging", path: "/messaging", icon: MessageSquare, description: "Messaging frameworks, positioning statements, and value pillar development" },
-  { label: "Technical Marketing", path: "/technical-marketing", icon: FileText, description: "Technical whitepapers, datasheets, and architecture explanations" },
-  { label: "Sales Enablement", path: "/sales-enablement", icon: Target, description: "Discovery guides, demo narratives, and objection handling" },
-];
+// const workLinks = [
+//   { label: "Landing Pages", path: "/landing-pages", icon: Layout, description: "Product positioning, conversion strategy, and technical storytelling" },
+//   { label: "Messaging", path: "/messaging", icon: MessageSquare, description: "Messaging frameworks, positioning statements, and value pillar development" },
+//   { label: "Technical Marketing", path: "/technical-marketing", icon: FileText, description: "Technical whitepapers, datasheets, and architecture explanations" },
+//   { label: "Sales Enablement", path: "/sales-enablement", icon: Target, description: "Discovery guides, demo narratives, and objection handling" },
+// ];
 
 const Home = () => (
   <>
@@ -22,8 +22,8 @@ const Home = () => (
     <InTheirShoesSection />
     <WhatIBuildSection />
 
-    {/* Work Samples quick links */}
-    <section id="work-samples" className="border-t border-border/30 py-14 md:py-20">
+    {/* Work Samples quick links — commented out for MVP */}
+    {/* <section id="work-samples" className="border-t border-border/30 py-14 md:py-20">
       <div className="container mx-auto">
         <div className="mb-8 text-center md:mb-10">
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary sm:text-sm">Explore</p>
@@ -53,7 +53,7 @@ const Home = () => (
           ))}
         </div>
       </div>
-    </section>
+    </section> */}
   </>
 );
 
