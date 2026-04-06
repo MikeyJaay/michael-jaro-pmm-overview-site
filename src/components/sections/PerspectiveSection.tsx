@@ -5,18 +5,27 @@ const tabs = [
   {
     id: "sales",
     label: "Sales",
-    subLabel: "Buyer Reality",
-    title: "The Weight of a Quta",
-    body: "I started in the part of GTM where reality shows up first. I've run discovery, handled objections, generated pipeline, and built outbound motions from the ground up. That taught me how buyers actually talk, where deals really stall, and what messaging sounds good on paper — but falls apart in a live conversation.",
+    subLabel: "Sales",
+    title: "The Weight of a Quota",
+    body: [
+      "Sales was my first real exposure to how fast the market tests your assumptions.",
+      "At Codility, I led the outbound engine as a top SDR \u2014 cold-breaking into accounts ranging from 10-person SMBs to global enterprises, selling directly to software engineering leaders. I learned quickly that punchy messaging means nothing if it falls apart the second a buyer pushes back \u2014 or if it doesn\u2019t evolve as fast as the market does.",
+      "Sales taught me how buyers actually talk, where deals really stall, and how much gets lost when strategy is built too far away from the trenches.",
+    ],
     image: "/home-page-images/robot-sales.png",
     imageAlt: "Robot in sales mode",
   },
   {
     id: "technical",
     label: "Product",
-    subLabel: "Technical Truth",
-    title: "Building Something from Nothing",
-    body: "I've worked closely with engineering and spent time building software myself. That gave me a deep respect for the complexity behind product decisions — and a much better instinct for translating technical systems into language the market can understand.",
+    subLabel: "Product",
+    title: "Where Technical Meets Narrative",
+    body: [
+      "I\u2019ve spent enough time close to product and engineering to know that what looks simple from the outside is usually anything but.",
+      "I\u2019ve hard-coded software myself, worked through technical reviews firsthand, partnered with world-class product leaders at CrowdStrike, and spent hours navigating deals at Codility and hackajob with engineering leaders breaking down how their systems are actually built\u2014and what it really takes to support them.",
+      "That perspective changed how I partner with product.",
+      "Once you understand the architecture, constraints, and tradeoffs behind the work, product decisions stop looking simple and start telling a story.",
+    ],
     image: "/home-page-images/robot-product.png",
     imageAlt: "Robot building product",
   },
@@ -25,7 +34,7 @@ const tabs = [
     label: "Marketing",
     subLabel: "Market Narrative",
     title: "Make the Market Feel Something",
-    body: "Product marketing became the place where all of that clicked. It's where product truth, buyer reality, and market narrative are supposed to come together. That's the work I'm most drawn to: building the connective tissue between teams so GTM feels less fragmented — and far more effective.",
+    body: ["Product marketing became the place where all of that clicked. It\u2019s where product truth, buyer reality, and market narrative are supposed to come together. That\u2019s the work I\u2019m most drawn to: building the connective tissue between teams so GTM feels less fragmented \u2014 and far more effective."],
     image: "/home-page-images/robot-marketing.png",
     imageAlt: "Robot doing marketing",
   },
@@ -113,9 +122,13 @@ const PerspectiveSection = () => {
               <h3 className="mb-5 text-2xl font-bold text-foreground md:text-3xl">
                 {active.title}
               </h3>
-              <p className="text-base leading-relaxed text-muted-foreground md:text-[1.0625rem]">
-                {active.body}
-              </p>
+              <div className="space-y-4">
+                {active.body.map((para, i) => (
+                  <p key={i} className="text-base leading-relaxed text-muted-foreground md:text-[1.0625rem]">
+                    {para}
+                  </p>
+                ))}
+              </div>
             </div>
 
             {/* Right — robot graphic */}
