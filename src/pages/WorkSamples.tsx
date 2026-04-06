@@ -81,8 +81,8 @@ const WorkSamples = () => (
             className="flex justify-center mt-2 md:mt-0 md:w-[42%] lg:w-[45%] xl:w-[48%] shrink-0 items-start"
           >
             <img
-              src="/home-page-images/robot-pen.png"
-              alt="Robot with pen"
+              src="/home-page-images/robot-samples.png"
+              alt="Robot with samples"
               className="w-auto max-h-48 md:max-h-[22rem] object-contain"
             />
           </motion.div>
