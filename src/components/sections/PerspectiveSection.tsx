@@ -6,25 +6,25 @@ const tabs = [
     id: "sales",
     label: "Sales",
     subLabel: "Buyer Reality",
-    title: "Sales",
+    title: "The Weight of a Quta",
     body: "I started in the part of GTM where reality shows up first. I've run discovery, handled objections, generated pipeline, and built outbound motions from the ground up. That taught me how buyers actually talk, where deals really stall, and what messaging sounds good on paper — but falls apart in a live conversation.",
     image: "/home-page-images/robot-sales.png",
     imageAlt: "Robot in sales mode",
   },
   {
     id: "technical",
-    label: "Technical",
-    subLabel: "Product Truth",
-    title: "Technical Build",
+    label: "Product",
+    subLabel: "Technical Truth",
+    title: "Building Something from Nothing",
     body: "I've worked closely with engineering and spent time building software myself. That gave me a deep respect for the complexity behind product decisions — and a much better instinct for translating technical systems into language the market can understand.",
     image: "/home-page-images/robot-product.png",
     imageAlt: "Robot building product",
   },
   {
     id: "pmm",
-    label: "Product Marketing",
+    label: "Marketing",
     subLabel: "Market Narrative",
-    title: "Product Marketing",
+    title: "Make the Market Feel Something",
     body: "Product marketing became the place where all of that clicked. It's where product truth, buyer reality, and market narrative are supposed to come together. That's the work I'm most drawn to: building the connective tissue between teams so GTM feels less fragmented — and far more effective.",
     image: "/home-page-images/robot-marketing.png",
     imageAlt: "Robot doing marketing",
@@ -52,6 +52,22 @@ const PerspectiveSection = () => {
           <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-4xl lg:text-[2.5rem]">
             Three Perspectives, One Lens
           </h2>
+        </motion.div>
+
+        {/* Intro copy */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.08 }}
+          className="mb-10 md:mb-12 max-w-2xl space-y-4"
+        >
+          <p className="text-lg font-semibold leading-snug text-foreground md:text-xl">
+            I didn&rsquo;t learn strategic empathy in theory.
+          </p>
+          <p className="text-base leading-relaxed text-muted-foreground">
+            I learned it by working inside every part of go-to-market that are usually too far apart to fully understand each other.
+          </p>
         </motion.div>
 
         {/* Tab bar */}
