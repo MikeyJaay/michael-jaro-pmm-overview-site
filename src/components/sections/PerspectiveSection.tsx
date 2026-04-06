@@ -8,6 +8,8 @@ const tabs = [
     subLabel: "Buyer Reality",
     title: "Sales",
     body: "I started in the part of GTM where reality shows up first. I've run discovery, handled objections, generated pipeline, and built outbound motions from the ground up. That taught me how buyers actually talk, where deals really stall, and what messaging sounds good on paper — but falls apart in a live conversation.",
+    image: "/home-page-images/robot-sales.png",
+    imageAlt: "Robot in sales mode",
   },
   {
     id: "technical",
@@ -15,6 +17,8 @@ const tabs = [
     subLabel: "Product Truth",
     title: "Technical Build",
     body: "I've worked closely with engineering and spent time building software myself. That gave me a deep respect for the complexity behind product decisions — and a much better instinct for translating technical systems into language the market can understand.",
+    image: "/home-page-images/robot-product.png",
+    imageAlt: "Robot building product",
   },
   {
     id: "pmm",
@@ -22,6 +26,8 @@ const tabs = [
     subLabel: "Market Narrative",
     title: "Product Marketing",
     body: "Product marketing became the place where all of that clicked. It's where product truth, buyer reality, and market narrative are supposed to come together. That's the work I'm most drawn to: building the connective tissue between teams so GTM feels less fragmented — and far more effective.",
+    image: "/home-page-images/robot-marketing.png",
+    imageAlt: "Robot doing marketing",
   },
 ];
 
@@ -96,14 +102,13 @@ const PerspectiveSection = () => {
               </p>
             </div>
 
-            {/* Right — placeholder */}
-            <div className="hidden md:flex items-center justify-center">
-              <div className="relative w-full aspect-[4/3] rounded-2xl border border-primary/15 bg-secondary/60 flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
-                <p className="relative text-sm font-medium text-muted-foreground/50 tracking-wide">
-                  [ Graphic Placeholder ]
-                </p>
-              </div>
+            {/* Right — robot graphic */}
+            <div className="flex justify-center items-start">
+              <img
+                src={active.image}
+                alt={active.imageAlt}
+                className="w-auto max-h-48 md:max-h-[22rem] object-contain"
+              />
             </div>
           </motion.div>
         </AnimatePresence>
