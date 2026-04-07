@@ -1,6 +1,6 @@
 const tools = [
   { name: "Lovable", logo: "https://lovable.dev/favicon.ico"},
-  { name: "Claude Code", logo: "https://www.anthropic.com/favicon.ico"},
+  { name: "Claude Code", logo: "/home-page-images/claude-logo.svg"},
   { name: "VS Code", logo: "https://code.visualstudio.com/favicon.ico" },
   // { name: "Figma", logo: "https://static.figma.com/app/icon/1/favicon.png", url: "https://figma.com" },
 ];

@@ -3,7 +3,6 @@ import CompanyLogos from "@/components/common/CompanyLogos";
 import GtmBreaksSection from "@/components/sections/GtmBreaksSection";
 import InTheirShoesSection from "@/components/sections/InTheirShoesSection";
 import PerspectiveSection from "@/components/sections/PerspectiveSection";
-import WhatIBuildSection from "@/components/sections/WhatIBuildSection";
 import PhilosophySection from "@/components/sections/PhilosophySection";
 // import { motion } from "framer-motion";
 // import { Link } from "react-router-dom";
@@ -23,7 +22,6 @@ const Home = () => (
     <GtmBreaksSection />
     <InTheirShoesSection />
     <PerspectiveSection />
-    <WhatIBuildSection />
     <PhilosophySection />
 
     {/* Work Samples quick links — commented out for MVP */}

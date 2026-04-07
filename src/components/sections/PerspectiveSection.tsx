@@ -167,17 +167,6 @@ const PerspectiveSection = () => {
           </motion.div>
         </AnimatePresence>
 
-        {/* Closing statement */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-12 text-xl font-bold tracking-tight text-foreground md:mt-14 md:text-2xl"
-        >
-          My work sits in the middle of{" "}
-          <span className="text-gradient">strategy, systems, and translation.</span>
-        </motion.p>
 
       </div>
     </section>
