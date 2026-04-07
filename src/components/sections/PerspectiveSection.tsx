@@ -19,7 +19,7 @@ const tabs = [
     id: "technical",
     label: "Product",
     subLabel: "Product",
-    title: "Where Technical Meets Narrative",
+    title: "Where Technical meets Narrative",
     body: [
       "I\u2019ve spent enough time close to product and engineering to know that what looks simple from the outside is usually anything but.",
       "I\u2019ve hard-coded software myself, worked through technical reviews firsthand, partnered with world-class product leaders at CrowdStrike, and spent hours navigating deals at Codility and hackajob with engineering leaders breaking down how their systems are actually built\u2014and what it really takes to support them.",
@@ -32,11 +32,36 @@ const tabs = [
   {
     id: "pmm",
     label: "Marketing",
-    subLabel: "Market Narrative",
+    subLabel: "Marketing",
     title: "Make the Market Feel Something",
-    body: ["Product marketing became the place where all of that clicked. It\u2019s where product truth, buyer reality, and market narrative are supposed to come together. That\u2019s the work I\u2019m most drawn to: building the connective tissue between teams so GTM feels less fragmented \u2014 and far more effective."],
+    body: [
+      "I\u2019ve spent enough time inside marketing teams to know that great ideas mean very little if the music they make can\u2019t connect to the greater orchestra.",
+      "Field, customer, demand gen, ops, design, web, and more are all playing different instruments\u2014each carrying their own deadlines, goals, and pressures at the same time.",
+      "It\u2019s taught me that marketing isn\u2019t just about creativity.",
+      "It\u2019s about orchestration, timing, trade-offs, and creating music that makes people feel something in markets saturated with noise.",
+      "The best marketing doesn\u2019t happen when every first chair is playing a different piece.",
+      "It happens when the entire orchestra works from the same score\u2014giving each instrument space to shine while still advancing the same story.",
+    ],
     image: "/home-page-images/robot-marketing.png",
     imageAlt: "Robot doing marketing",
+  },
+  {
+    id: "pmm",
+    label: "PMM",
+    subLabel: "PMM",
+    title: "Where It All Comes Together",
+    body: [
+      "Product marketing is where everything started to click.",
+      "It\u2019s where the separate instruments finally became an orchestra \u2014 where buyer reality, technical depth, and market narrative stopped competing for attention and started moving in the same direction.",
+      "That\u2019s what drew me to PMM.",
+      "The best PMMs are conductors. They don\u2019t need to be the most skilled at every instrument \u2014 but they do need to understand each one well enough to bring the full performance to life.",
+      "That\u2019s what product marketing is to me:",
+      "The connective tissue.",
+      "The translator.",
+      "The force that helps everything move together.",
+    ],
+    image: "/home-page-images/robot-ven.png",
+    imageAlt: "Robot PMM",
   },
 ];
 
@@ -59,7 +84,7 @@ const PerspectiveSection = () => {
             My Background
           </p>
           <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-4xl lg:text-[2.5rem]">
-            Three Perspectives, One Lens
+            Four Perspectives, One Lens
           </h2>
         </motion.div>
 
@@ -132,7 +157,7 @@ const PerspectiveSection = () => {
             </div>
 
             {/* Right — robot graphic */}
-            <div className="flex justify-center items-start">
+            <div className="flex justify-center items-start pt-28">
               <img
                 src={active.image}
                 alt={active.imageAlt}
