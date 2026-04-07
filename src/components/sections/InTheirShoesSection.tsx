@@ -47,7 +47,7 @@ const InTheirShoesSection = () => (
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="text-xl font-semibold leading-snug text-foreground md:text-2xl"
             >
-              Too often, we&rsquo;re so focused on being the hero of our own story &mdash; the deadlines, the pressure, the KPIs &mdash; that we don&rsquo;t realize we&rsquo;ve unintentionally become the antagonist in someone else&rsquo;s.
+              Too often, we&rsquo;re so focused on being the hero of our own story that we don&rsquo;t realize we&rsquo;ve unintentionally become the antagonist in someone else&rsquo;s.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 12 }}
