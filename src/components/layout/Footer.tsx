@@ -7,9 +7,9 @@ const tools = [
 const Footer = () => (
   <footer className="border-t border-border/50 bg-card/50">
     <div className="container mx-auto px-4 py-8">
-      <div className="relative flex items-center justify-center">
-        {/* Made with — centered */}
-        <div className="flex flex-col items-center gap-1.5">
+      <div className="flex items-center justify-center">
+        {/* Made with — left on mobile, centered on desktop */}
+        <div className="flex flex-col items-start gap-1.5 md:items-center">
           <p className="text-xs text-muted-foreground">Made with</p>
           <div className="flex items-center gap-3">
             {tools.map((tool) => (
@@ -33,7 +33,7 @@ const Footer = () => (
         </div>
 
         {/* Social icons — pinned right */}
-        <div className="absolute right-0 flex items-center gap-1">
+        <div className="ml-auto flex items-center gap-1">
           <a
             href="https://www.linkedin.com/in/michaeljaro/"
             target="_blank"
