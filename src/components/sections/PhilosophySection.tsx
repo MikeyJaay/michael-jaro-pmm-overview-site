@@ -5,7 +5,7 @@ import MagneticButton from "@/components/common/MagneticButton";
 const PhilosophySection = () => (
   <section className="bg-dark-section py-16 md:py-20">
     <div className="container mx-auto">
-      <div className="mx-auto max-w-3xl text-center">
+      <div className="mx-auto max-w-5xl text-center">
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -14,13 +14,12 @@ const PhilosophySection = () => (
           transition={{ duration: 0.65, delay: 0.1 }}
           className="mb-10"
         >
-          <p className="text-2xl font-bold leading-snug tracking-tight text-white md:text-3xl lg:text-[2rem]">
-            The best go-to-market doesn&rsquo;t come from louder teams or better plans.
+          <p className="text-xl font-bold leading-snug tracking-tight text-white md:text-2xl lg:text-[1.75rem]">
+            The best go-to-market doesn&rsquo;t come from louder teams or better talent.
           </p>
-          <p className="mt-4 text-2xl font-bold leading-snug tracking-tight text-white md:text-3xl lg:text-[2rem]">
-            It comes from people{" "}
-            <span className="text-gradient">finally understanding each other</span>
-            {" "}&mdash; and moving together.
+          <p className="mt-4 text-xl font-bold leading-snug tracking-tight text-white md:text-2xl lg:text-[1.75rem]">
+            It comes from teams{" "}
+            <span className="text-gradient">finally understanding each other.</span>
           </p>
         </motion.div>
 
