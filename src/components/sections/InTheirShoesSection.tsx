@@ -12,7 +12,7 @@ const InTheirShoesSection = () => (
     <div className="container mx-auto">
 
       {/* Two-column grid for top content */}
-      <div className="md:grid md:grid-cols-[2fr_3fr] md:items-start md:gap-16 lg:gap-24">
+      <div className="md:grid md:grid-cols-[2fr_3fr] md:items-start md:gap-10 lg:gap-16">
 
         {/* Left — sticky heading */}
         <motion.div
@@ -121,7 +121,7 @@ const InTheirShoesSection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.65, delay: 0.2 }}
-        className="relative mt-14 overflow-hidden rounded-2xl bg-dark-section px-5 py-10 text-center sm:px-8 sm:py-14 md:px-16 md:py-16"
+        className="relative mt-14 overflow-hidden rounded-2xl bg-dark-section px-5 py-10 text-center sm:px-8 sm:py-14 md:px-10 md:py-14 lg:px-16 lg:py-16"
       >
         {/* Opening quote watermark */}
         <span className="pointer-events-none absolute left-6 top-0 select-none hidden sm:block text-[9rem] font-extrabold leading-none text-white/[0.12] md:text-[12rem]">
