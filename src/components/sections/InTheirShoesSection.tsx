@@ -28,6 +28,11 @@ const InTheirShoesSection = () => (
           <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-4xl lg:text-[2.5rem]">
             Strategic Empathy
           </h2>
+          <img
+            src="/home-page-images/robot-heart.png"
+            alt="Robot with heart"
+            className="mt-10 hidden w-full max-w-[260px] self-center object-contain md:block mx-auto"
+          />
         </motion.div>
 
         {/* Right — narrative */}

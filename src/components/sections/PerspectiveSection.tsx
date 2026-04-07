@@ -5,29 +5,63 @@ const tabs = [
   {
     id: "sales",
     label: "Sales",
-    subLabel: "Buyer Reality",
-    title: "Sales",
-    body: "I started in the part of GTM where reality shows up first. I've run discovery, handled objections, generated pipeline, and built outbound motions from the ground up. That taught me how buyers actually talk, where deals really stall, and what messaging sounds good on paper — but falls apart in a live conversation.",
+    subLabel: "Sales",
+    title: "The Weight of a Quota",
+    body: [
+      "Sales was my first real exposure to how fast the market tests your assumptions.",
+      "At Codility, I led the outbound engine as a top SDR \u2014 cold-breaking into accounts ranging from 10-person SMBs to global enterprises, selling directly to software engineering leaders. I learned quickly that punchy messaging means nothing if it falls apart the second a buyer pushes back \u2014 or if it doesn\u2019t evolve as fast as the market does.",
+      "Sales taught me how buyers actually talk, where deals really stall, and how much gets lost when strategy is built too far away from the trenches.",
+    ],
     image: "/home-page-images/robot-sales.png",
     imageAlt: "Robot in sales mode",
   },
   {
     id: "technical",
-    label: "Technical",
-    subLabel: "Product Truth",
-    title: "Technical Build",
-    body: "I've worked closely with engineering and spent time building software myself. That gave me a deep respect for the complexity behind product decisions — and a much better instinct for translating technical systems into language the market can understand.",
+    label: "Product",
+    subLabel: "Product",
+    title: "Where Technical meets Narrative",
+    body: [
+      "I\u2019ve spent enough time close to product and engineering to know that what looks simple from the outside is usually anything but.",
+      "I\u2019ve hard-coded software myself, worked through technical reviews firsthand, partnered with world-class product leaders at CrowdStrike, and spent hours navigating deals at Codility and hackajob with engineering leaders breaking down how their systems are actually built\u2014and what it really takes to support them.",
+      "That perspective changed how I partner with product.",
+      "Once you understand the architecture, constraints, and tradeoffs behind the work, product decisions stop looking simple and start telling a story.",
+    ],
     image: "/home-page-images/robot-product.png",
     imageAlt: "Robot building product",
   },
   {
     id: "pmm",
-    label: "Product Marketing",
-    subLabel: "Market Narrative",
-    title: "Product Marketing",
-    body: "Product marketing became the place where all of that clicked. It's where product truth, buyer reality, and market narrative are supposed to come together. That's the work I'm most drawn to: building the connective tissue between teams so GTM feels less fragmented — and far more effective.",
+    label: "Marketing",
+    subLabel: "Marketing",
+    title: "Make the Market Feel Something",
+    body: [
+      "I\u2019ve spent enough time inside marketing teams to know that great ideas mean very little if the music they make can\u2019t connect to the greater orchestra.",
+      "Field, customer, demand gen, ops, design, web, and more are all playing different instruments\u2014each carrying their own deadlines, goals, and pressures at the same time.",
+      "It\u2019s taught me that marketing isn\u2019t just about creativity.",
+      "It\u2019s about orchestration, timing, trade-offs, and creating music that makes people feel something in markets saturated with noise.",
+      "The best marketing doesn\u2019t happen when every first chair is playing a different piece.",
+      "It happens when the entire orchestra works from the same score\u2014giving each instrument space to shine while still advancing the same story.",
+    ],
     image: "/home-page-images/robot-marketing.png",
     imageAlt: "Robot doing marketing",
+  },
+  {
+    id: "pmm",
+    label: "PMM",
+    subLabel: "PMM",
+    title: "Where It All Comes Together",
+    body: [
+      "Product marketing is where everything started to click.",
+      "It\u2019s where the separate instruments finally became an orchestra \u2014 where buyer reality, technical depth, and market narrative stopped competing for attention and started moving in the same direction.",
+      "That\u2019s what drew me to PMM.",
+      "The best PMMs are conductors. They don\u2019t need to be the most skilled at every instrument \u2014 but they do need to understand each one well enough to bring the full performance to life.",
+      "That\u2019s what product marketing is to me:",
+      "The connective tissue.",
+      "The translator.",
+      "The force that helps everything move together.",
+    ],
+    image: "/home-page-images/robot-ven.png",
+    imageAlt: "Robot PMM",
   },
 ];
 
@@ -50,8 +84,24 @@ const PerspectiveSection = () => {
             My Background
           </p>
           <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-4xl lg:text-[2.5rem]">
-            Three Perspectives, One Lens
+            Four Perspectives, One Lens
           </h2>
+        </motion.div>
+
+        {/* Intro copy */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.08 }}
+          className="mb-10 md:mb-12 max-w-2xl space-y-4"
+        >
+          <p className="text-lg font-semibold leading-snug text-foreground md:text-xl">
+            I didn&rsquo;t learn strategic empathy in theory.
+          </p>
+          <p className="text-base leading-relaxed text-muted-foreground">
+            I learned it by working inside every part of go-to-market that are usually too far apart to fully understand each other.
+          </p>
         </motion.div>
 
         {/* Tab bar */}
@@ -97,13 +147,17 @@ const PerspectiveSection = () => {
               <h3 className="mb-5 text-2xl font-bold text-foreground md:text-3xl">
                 {active.title}
               </h3>
-              <p className="text-base leading-relaxed text-muted-foreground md:text-[1.0625rem]">
-                {active.body}
-              </p>
+              <div className="space-y-4">
+                {active.body.map((para, i) => (
+                  <p key={i} className="text-base leading-relaxed text-muted-foreground md:text-[1.0625rem]">
+                    {para}
+                  </p>
+                ))}
+              </div>
             </div>
 
             {/* Right — robot graphic */}
-            <div className="flex justify-center items-start">
+            <div className="flex justify-center items-start pt-28">
               <img
                 src={active.image}
                 alt={active.imageAlt}
