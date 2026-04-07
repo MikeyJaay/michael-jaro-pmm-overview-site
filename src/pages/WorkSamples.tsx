@@ -4,24 +4,40 @@ import MagneticButton from "@/components/common/MagneticButton";
 
 const artifacts = [
   {
+    title: "GTM Systems & Frameworks",
+    description: "End-to-end launch and go-to-market systems \u2014 including briefs, workflows, stakeholder alignment models, and execution frameworks that scale across teams.",
+  },
+  {
+    title: "Launch Strategy & Execution",
+    description: "Structured launch approaches from narrative through rollout \u2014 aligning product, marketing, and sales across every phase of go-to-market.",
+  },
+  {
     title: "Messaging & Positioning",
-    description: "Frameworks and narratives that align product truth with buyer reality — built to survive sales conversations.",
+    description: "Narratives built from product truth, competitive pressure, and buyer reality \u2014 designed to hold up in real conversations, not just on slides.",
   },
   {
-    title: "Pitch Decks",
-    description: "Investor and partner decks that tell a coherent story from market problem through differentiated solution.",
+    title: "Sales Enablement & Outbound",
+    description: "Outbound frameworks, discovery guides, objection handling, and enablement assets built from real deal experience \u2014 not theoretical buyer journeys.",
   },
   {
-    title: "Landing Pages",
-    description: "Conversion-focused pages that translate complex products into clear, compelling value propositions.",
+    title: "Technical PMM & AI Content",
+    description: "Technical narratives, whitepapers, and security-aligned messaging that translate complex AI and platform systems into enterprise-ready positioning.",
   },
   {
-    title: "One-Pagers",
-    description: "Tight, scannable assets built for sales teams — objection-aware and grounded in real buyer language.",
+    title: "Campaigns, Web & Conversion",
+    description: "Landing pages, campaign strategy, and conversion-focused experiences designed to translate GTM strategy into measurable pipeline impact.",
   },
   {
-    title: "Technical Whitepapers",
-    description: "Deep-dive content for technical buyers and enterprise evaluation — credibility at the security and architecture layer.",
+    title: "Executive & Strategic Narratives",
+    description: "Keynotes, executive messaging, and high-level narratives that shape how products, platforms, and AI strategies are presented at the leadership level.",
+  },
+  {
+    title: "Pitch Decks & Storytelling",
+    description: "Structured narratives for investors, partners, and internal stakeholders \u2014 built to clearly communicate market opportunity and differentiated value.",
+  },
+  {
+    title: "Sales Assets & One-Pagers",
+    description: "Concise, high-impact collateral built for real sales conversations \u2014 grounded in objection handling and buyer language.",
   },
 ];
 
@@ -54,10 +70,13 @@ const WorkSamples = () => (
               className="mt-6 max-w-xl space-y-3"
             >
               <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
-                Samples span messaging frameworks, launch strategy, sales enablement, and technical content across AI and enterprise software.
+                My work spans more than individual assets. It spans systems, narratives, and frameworks that drive go-to-market from strategy through execution.
               </p>
               <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
-                Hiring managers and recruiters — reach out on LinkedIn and I'll share what's most relevant to your context.
+                Across AI, cybersecurity, and enterprise SaaS, I&rsquo;ve built everything from technical positioning and executive narratives to launch systems, outbound frameworks, and sales enablement.
+              </p>
+              <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
+                If you&rsquo;re a hiring manager or recruiter, reach out on LinkedIn &mdash; I&rsquo;ll share examples tailored to your team context, where permissible.
               </p>
             </motion.div>
 
@@ -102,7 +121,7 @@ const WorkSamples = () => (
           className="mb-10 md:mb-14"
         >
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary sm:text-sm">
-            What's Available
+            What I Build
           </p>
           <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-4xl">
             Types of Work
