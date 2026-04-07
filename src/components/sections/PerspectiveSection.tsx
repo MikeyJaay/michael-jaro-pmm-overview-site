@@ -9,7 +9,7 @@ const tabs = [
     title: "The Weight of a Quota",
     body: [
       "Sales was my first real exposure to how fast the market tests your assumptions.",
-      "At Codility, I led the outbound engine as a top SDR \u2014 cold-breaking into accounts ranging from 10-person SMBs to global enterprises, selling directly to software engineering leaders. I learned quickly that punchy messaging means nothing if it falls apart the second a buyer pushes back \u2014 or if it doesn\u2019t evolve as fast as the market does.",
+      "At Codility, I led the outbound engine as a top SDR\u2014cold-breaking into accounts ranging from 10-person SMBs to global enterprises, selling directly to software engineering leaders. I learned quickly that punchy messaging means nothing if it falls apart the second a buyer pushes back\u2014or if it doesn\u2019t evolve as fast as the market does.",
       "Sales taught me how buyers actually talk, where deals really stall, and how much gets lost when strategy is built too far away from the trenches.",
     ],
     image: "/home-page-images/robot-sales.png",
@@ -23,7 +23,7 @@ const tabs = [
     body: [
       "I\u2019ve spent enough time close to product and engineering to know that what looks simple from the outside is usually anything but.",
       "I\u2019ve hard-coded software myself, worked through technical reviews firsthand, partnered with world-class product leaders at CrowdStrike, and spent hours navigating deals at Codility and hackajob with engineering leaders breaking down how their systems are actually built\u2014and what it really takes to support them.",
-      "That perspective changed how I partner with product.",
+      
       "Once you understand the architecture, constraints, and tradeoffs behind the work, product decisions stop looking simple and start telling a story.",
     ],
     image: "/home-page-images/robot-product.png",
@@ -35,10 +35,9 @@ const tabs = [
     subLabel: "Marketing",
     title: "Make the Market Feel Something",
     body: [
-      "I\u2019ve spent enough time inside marketing teams to know that great ideas mean very little if the music they make can\u2019t connect to the greater orchestra.",
+      "Great marketing ideas mean very little if the music they make can\u2019t connect to the greater orchestra.",
       "Field, customer, demand gen, ops, design, web, and more are all playing different instruments\u2014each carrying their own deadlines, goals, and pressures at the same time.",
-      "It\u2019s taught me that marketing isn\u2019t just about creativity.",
-      "It\u2019s about orchestration, timing, trade-offs, and creating music that makes people feel something in markets saturated with noise.",
+      "It\u2019s taught me that marketing isn\u2019t just about creativity. It\u2019s about orchestration, timing, trade-offs, and creating music that makes people feel something in markets saturated with noise.",
       "The best marketing doesn\u2019t happen when every first chair is playing a different piece.",
       "It happens when the entire orchestra works from the same score\u2014giving each instrument space to shine while still advancing the same story.",
     ],
@@ -52,9 +51,9 @@ const tabs = [
     title: "Where It All Comes Together",
     body: [
       "Product marketing is where everything started to click.",
-      "It\u2019s where the separate instruments finally became an orchestra \u2014 where buyer reality, technical depth, and market narrative stopped competing for attention and started moving in the same direction.",
+      "It\u2019s where the separate instruments finally became an orchestra\u2014where buyer reality, technical depth, and market narrative stopped competing for attention and started moving in the same direction.",
       
-      "The best PMMs are conductors. They don\u2019t need to be the most skilled at every instrument \u2014 but they do need to understand each one well enough to bring the full performance to life.",
+      "The best PMMs are conductors. They don\u2019t need to be the most skilled at every instrument\u2014but they do need to understand each one well enough to bring the full performance to life.",
     ],
     image: "/home-page-images/robot-ven-2.png",
     imageAlt: "Robot PMM",
@@ -143,6 +142,16 @@ const PerspectiveSection = () => {
               <h3 className="mb-5 text-2xl font-bold text-foreground md:text-3xl">
                 {active.title}
               </h3>
+
+              {/* Mobile only — image between title and body */}
+              <div className="md:hidden flex justify-center my-6">
+                <img
+                  src={active.image}
+                  alt={active.imageAlt}
+                  className="w-auto max-h-52 sm:max-h-64 object-contain"
+                />
+              </div>
+
               <div className="space-y-4">
                 {active.body.map((para, i) => (
                   <p key={i} className="text-base leading-relaxed text-muted-foreground md:text-[1.0625rem]">
@@ -152,12 +161,12 @@ const PerspectiveSection = () => {
               </div>
             </div>
 
-            {/* Right — robot graphic */}
-            <div className="flex justify-center items-start pt-4 md:pt-28">
+            {/* Right — robot graphic (desktop only) */}
+            <div className="hidden md:flex justify-center items-start pt-28">
               <img
                 src={active.image}
                 alt={active.imageAlt}
-                className="w-auto max-h-36 sm:max-h-48 md:max-h-[22rem] object-contain"
+                className="w-auto md:max-h-[22rem] object-contain"
               />
             </div>
           </motion.div>

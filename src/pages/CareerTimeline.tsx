@@ -14,7 +14,7 @@ const timelineData = [
     company: "Domino's",
     logo: dominosLogo,
     role: "Product Marketing Associate",
-    period: "NOV. 2019 — MAR. 2022",
+    period: "NOV. 2019—MAR. 2022",
     summary:
       "Embedded within the engineering team to support the rollout of a next-generation point-of-sale platform, translating technical development into executive communications, franchise readiness, and adoption across a complex global operator network.",
   },
@@ -22,7 +22,7 @@ const timelineData = [
     company: "Codility",
     logo: codilityLogo,
     role: "Sales Development Representative, Inbound",
-    period: "MAR. 2022 — JUN. 2022",
+    period: "MAR. 2022—JUN. 2022",
     summary:
       "Pivoted into SaaS sales by running consultative discovery with engineering and talent stakeholders evaluating developer assessment software, building early fluency in technical buyer conversations.",
   },
@@ -30,7 +30,7 @@ const timelineData = [
     company: "Codility",
     logo: codilityLogo,
     role: "Account Development Representative, Outbound",
-    period: "JUL. 2022 — FEB. 2023",
+    period: "JUL. 2022—FEB. 2023",
     summary:
       "Promoted within one quarter into outbound after becoming a top-performing rep, driving pipeline through technical prospecting and helping onboard new SDR hires navigating complex engineering-led sales conversations.",
   },
@@ -38,7 +38,7 @@ const timelineData = [
     company: "Hackajob",
     logo: hackajobLogo,
     role: "Growth Lead | GTM Founding Team",
-    period: "FEB. 2023 — MAY 2024",
+    period: "FEB. 2023—MAY 2024",
     summary:
       "Joined as the third North American hire to help build the company's first U.S. go-to-market motion, taking a UK-based technical hiring platform from zero brand awareness to early customer traction through foundational messaging, positioning, and market development.",
   },
@@ -46,7 +46,7 @@ const timelineData = [
     company: "CrowdStrike",
     logo: crowdstrikeLogo,
     role: "Product Marketing Manager, XIoT (MBA Program)",
-    period: "MAY 2024 — AUG. 2024",
+    period: "MAY 2024—AUG. 2024",
     summary:
       "Led the rebrand and GTM relaunch of Falcon for IoT to Falcon for XIoT, repositioning the platform for a $9B critical infrastructure security market and translating complex technical capabilities into differentiated cybersecurity messaging.",
   },
@@ -54,7 +54,7 @@ const timelineData = [
     company: "Mitratech",
     logo: mitratechLogo,
     role: "Product Marketing Manager, Platform",
-    period: "FEB. 2025 — DEC. 2025",
+    period: "FEB. 2025—DEC. 2025",
     summary:
       "Led go-to-market efforts across multiple solutions, including the launch of Mitratech HQ, while influencing $2.2M+ in pipeline through launches, webinars, and strategic deal support. Also rebuilt the company's competitive intelligence program and helped establish repeatable GTM systems that later supported broader AI enablement efforts.",
   },
@@ -62,7 +62,7 @@ const timelineData = [
     company: "Mitratech",
     logo: mitratechLogo,
     role: "Technical Product Marketing Manager, AI Trust & Security",
-    period: "JAN. 2026 — PRESENT",
+    period: "JAN. 2026—PRESENT",
     summary:
       "Lead AI trust and security product marketing across Mitratech's portfolio, owning the GTM standards for responsibly positioning and launching AI capabilities across 10+ domain-specific solutions. Translate complex AI architecture, security guardrails, and human-in-the-loop design into defensible market narratives that support enterprise adoption and security review.",
   },
@@ -81,7 +81,7 @@ const TimelineCard = ({
 
   const cardContent = (
     <div className="group rounded-xl border border-border/50 bg-card p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-[0_8px_30px_-4px_hsl(221_83%_53%/0.10)] md:p-8">
-      {/* Header row — blue bar + period + title on left, logo on right */}
+      {/* Header row—blue bar + period + title on left, logo on right */}
       <div className="flex items-start justify-between gap-6">
         <div className="flex-1 min-w-0">
           <div className="mb-3 h-1 w-8 rounded-full bg-primary" />
@@ -99,7 +99,7 @@ const TimelineCard = ({
           loading="lazy"
         />
       </div>
-      {/* Summary — full width below */}
+      {/* Summary—full width below */}
       <p className="mt-5 text-sm leading-relaxed text-muted-foreground md:text-base">
         {item.summary}
       </p>
@@ -113,7 +113,7 @@ const TimelineCard = ({
       viewport={{ once: true, margin: "-60px" }}
       transition={{ delay: index * 0.08, duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
     >
-      {/* Mobile layout — left spine + card (unchanged) */}
+      {/* Mobile layout—left spine + card (unchanged) */}
       <div className="flex gap-6 md:hidden">
         <div className="flex flex-col items-center">
           <div className="mt-1.5 h-3 w-3 shrink-0 rounded-full border-2 border-primary bg-background ring-4 ring-primary/10" />
@@ -124,13 +124,13 @@ const TimelineCard = ({
         </div>
       </div>
 
-      {/* Desktop layout — centered spine, alternating left/right */}
+      {/* Desktop layout—centered spine, alternating left/right */}
       <div className={`hidden md:grid md:grid-cols-[1fr_2rem_1fr] ${isLast ? "" : "md:pb-10"}`}>
         {/* Left slot */}
         <div className="pr-8">
           {isEven && cardContent}
         </div>
-        {/* Center spine — dot only, continuous line is in parent */}
+        {/* Center spine—dot only, continuous line is in parent */}
         <div className="flex justify-center">
           <div className="relative z-10 mt-8 h-3 w-3 shrink-0 rounded-full border-2 border-primary bg-background ring-4 ring-primary/10" />
         </div>
@@ -156,7 +156,7 @@ const CareerTimeline = () => {
         <div className="container relative mx-auto">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:gap-16 lg:gap-20">
 
-            {/* Left — text */}
+            {/* Left—text */}
             <div className="flex-1 min-w-0">
               <motion.div
                 initial={{ opacity: 0, y: 24 }}
@@ -192,7 +192,7 @@ const CareerTimeline = () => {
               </motion.div>
             </div>
 
-            {/* Right — career image */}
+            {/* Right—career image */}
             <motion.div
               initial={{ opacity: 0, x: 24 }}
               animate={{ opacity: 1, x: 0 }}

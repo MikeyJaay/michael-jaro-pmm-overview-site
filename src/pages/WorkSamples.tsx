@@ -5,19 +5,19 @@ import MagneticButton from "@/components/common/MagneticButton";
 const artifacts = [
   {
     title: "GTM Systems & Frameworks",
-    description: "End-to-end launch and go-to-market systems \u2014 including briefs, workflows, stakeholder alignment models, and execution frameworks that scale across teams.",
+    description: "End-to-end launch and go-to-market systems\u2014including briefs, workflows, stakeholder alignment models, and execution frameworks that scale across teams.",
   },
   {
     title: "Launch Strategy & Execution",
-    description: "Structured launch approaches from narrative through rollout \u2014 aligning product, marketing, and sales across every phase of go-to-market.",
+    description: "Structured launch approaches from narrative through rollout\u2014aligning product, marketing, and sales across every phase of go-to-market.",
   },
   {
     title: "Messaging & Positioning",
-    description: "Narratives built from product truth, competitive pressure, and buyer reality \u2014 designed to hold up in real conversations, not just on slides.",
+    description: "Narratives built from product truth, competitive pressure, and buyer reality\u2014designed to hold up in real conversations, not just on slides.",
   },
   {
     title: "Sales Enablement & Outbound",
-    description: "Outbound frameworks, discovery guides, objection handling, and enablement assets built from real deal experience \u2014 not theoretical buyer journeys.",
+    description: "Outbound frameworks, discovery guides, objection handling, and enablement assets built from real deal experience\u2014not theoretical buyer journeys.",
   },
   {
     title: "Technical PMM & AI Content",
@@ -33,11 +33,11 @@ const artifacts = [
   },
   {
     title: "Pitch Decks & Storytelling",
-    description: "Structured narratives for investors, partners, and internal stakeholders \u2014 built to clearly communicate market opportunity and differentiated value.",
+    description: "Structured narratives for investors, partners, and internal stakeholders\u2014built to clearly communicate market opportunity and differentiated value.",
   },
   {
     title: "Sales Assets & One-Pagers",
-    description: "Concise, high-impact collateral built for real sales conversations \u2014 grounded in objection handling and buyer language.",
+    description: "Concise, high-impact collateral built for real sales conversations\u2014grounded in objection handling and buyer language.",
   },
 ];
 
@@ -73,7 +73,7 @@ const WorkSamples = () => (
                 My work spans more than individual assets. It spans systems, narratives, and frameworks that drive go-to-market from strategy through execution.
               </p>
               <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
-                If you&rsquo;re a hiring manager or recruiter, reach out on LinkedIn &mdash; I&rsquo;ll share examples tailored to your team context, where permissible.
+                If you&rsquo;re a hiring manager or recruiter, reach out on LinkedIn&mdash;I&rsquo;ll share examples tailored to your team context, where permissible.
               </p>
             </motion.div>
 

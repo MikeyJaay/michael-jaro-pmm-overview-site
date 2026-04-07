@@ -10,7 +10,7 @@ const columns = [
   {
     label: "Marketing",
     body: "Crafts what the market should feel.",
-    detail: "Building campaigns, messaging, launches, and demand motions — usually with less time, less context, and fewer resources than people realize.",
+    detail: "Building campaigns, messaging, launches, and demand motions—usually with less time, less context, and fewer resources than people realize.",
     sub: "But they're not always close enough to the buyer conversation to see the market conversation shift in real time.",
   },
   {
@@ -96,14 +96,14 @@ const GtmBreaksSection = () => (
           </span>
 
           <p className="relative mb-8 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-            The Real Problem
+            The Takeaway
           </p>
 
-          <p className="relative mx-auto max-w-5xl text-xl font-bold leading-snug tracking-tight text-white md:text-2xl lg:text-[1.75rem]">
+          <p className="relative mx-auto max-w-5xl text-lg sm:text-xl font-bold leading-snug tracking-tight text-white md:text-2xl lg:text-[1.75rem]">
             GTM doesn&rsquo;t fail from lack of talent.
           </p>
-          <p className="relative mx-auto mt-4 max-w-5xl text-xl font-bold leading-snug tracking-tight text-primary/90 md:text-2xl lg:text-[1.75rem]">
-            It fails when strong talent operates out of sync.
+          <p className="relative mx-auto mt-4 max-w-5xl text-lg sm:text-xl font-bold leading-snug tracking-tight text-primary/90 md:text-2xl lg:text-[1.75rem]">
+            It fails when strong talent<br className="sm:hidden" /> operates out of sync.
           </p>
         </motion.div>
       </div>
