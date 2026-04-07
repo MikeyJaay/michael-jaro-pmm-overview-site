@@ -30,7 +30,7 @@ const Writing = () => {
                   Writing
                 </p>
                 <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl xl:text-7xl">
-                  Ideas Worth Putting on Paper
+                  Putting Pen to Paper
                 </h1>
               </motion.div>
 
@@ -40,7 +40,7 @@ const Writing = () => {
                 transition={{ duration: 0.7, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
                 className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
               >
-                A career-spanning archive of articles published across companies, platforms, and personal channels — one place for all my writing.
+                A small archive of writings published across companies, platforms, and personal channels.
               </motion.p>
 
               <motion.div

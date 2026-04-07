@@ -123,19 +123,24 @@ const InTheirShoesSection = () => (
         transition={{ duration: 0.65, delay: 0.2 }}
         className="relative mt-14 overflow-hidden rounded-2xl bg-dark-section px-8 py-14 text-center md:px-16 md:py-16"
       >
-        {/* Decorative quote watermark */}
-        <span className="pointer-events-none absolute left-6 top-0 select-none text-[9rem] font-extrabold leading-none text-white/[0.06] md:text-[12rem]">
+        {/* Opening quote watermark */}
+        <span className="pointer-events-none absolute left-6 top-0 select-none text-[9rem] font-extrabold leading-none text-white/[0.12] md:text-[12rem]">
           &ldquo;
         </span>
 
-        <p className="relative text-[11px] font-semibold uppercase tracking-[0.2em] text-primary mb-8">
+        {/* Closing quote watermark */}
+        <span className="pointer-events-none absolute -bottom-20 right-6 select-none text-[9rem] font-extrabold leading-none text-white/[0.12] md:text-[12rem]">
+          &rdquo;
+        </span>
+
+        <p className="relative text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-8">
           The Goal
         </p>
 
-        <p className="relative mx-auto max-w-2xl text-2xl font-bold leading-snug tracking-tight text-white md:text-3xl lg:text-[2rem]">
+        <p className="relative mx-auto max-w-5xl text-xl font-bold leading-snug tracking-tight text-white md:text-2xl lg:text-[1.75rem]">
           As a PMM, my goal is never to be the antagonist of someone else&rsquo;s story.
         </p>
-        <p className="relative mx-auto mt-4 max-w-2xl text-2xl font-bold leading-snug tracking-tight text-white md:text-3xl lg:text-[2rem]">
+        <p className="relative mx-auto mt-4 max-w-5xl text-xl font-bold leading-snug tracking-tight text-white md:text-2xl lg:text-[1.75rem]">
           It&rsquo;s to win the Oscar for{" "}
           <span className="text-gradient">Best Supporting Actor</span>{" "}
           through shared perspective.
