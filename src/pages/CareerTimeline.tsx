@@ -80,7 +80,7 @@ const TimelineCard = ({
   const isEven = index % 2 === 0;
 
   const cardContent = (
-    <div className="group rounded-xl border border-border/50 bg-card p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-[0_8px_30px_-4px_hsl(221_83%_53%/0.10)] md:p-8">
+    <div className="group rounded-xl border border-border/50 bg-card p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-[0_8px_30px_-4px_hsl(221_83%_53%/0.10)] md:p-7 lg:p-8">
       {/* Header row—blue bar + period + title on left, logo on right */}
       <div className="flex items-start justify-between gap-6">
         <div className="flex-1 min-w-0">
@@ -113,8 +113,8 @@ const TimelineCard = ({
       viewport={{ once: true, margin: "-60px" }}
       transition={{ delay: index * 0.08, duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
     >
-      {/* Mobile layout—left spine + card (unchanged) */}
-      <div className="flex gap-6 md:hidden">
+      {/* Mobile + tablet layout—left spine + card */}
+      <div className="flex gap-6 lg:hidden">
         <div className="flex flex-col items-center">
           <div className="mt-1.5 h-3 w-3 shrink-0 rounded-full border-2 border-primary bg-background ring-4 ring-primary/10" />
           {!isLast && <div className="mt-1 flex-1 w-px bg-border/60" />}
@@ -125,7 +125,7 @@ const TimelineCard = ({
       </div>
 
       {/* Desktop layout—centered spine, alternating left/right */}
-      <div className={`hidden md:grid md:grid-cols-[1fr_2rem_1fr] ${isLast ? "" : "md:pb-10"}`}>
+      <div className={`hidden lg:grid lg:grid-cols-[1fr_2rem_1fr] ${isLast ? "" : "lg:pb-10"}`}>
         {/* Left slot */}
         <div className="pr-8">
           {isEven && cardContent}
@@ -154,7 +154,7 @@ const CareerTimeline = () => {
       {/* Hero */}
       <section className="relative overflow-hidden bg-hero-gradient py-20 md:py-28 lg:py-32">
         <div className="container relative mx-auto">
-          <div className="flex flex-col gap-6 md:flex-row md:items-center md:gap-16 lg:gap-20">
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:gap-10 lg:gap-16">
 
             {/* Left—text */}
             <div className="flex-1 min-w-0">
@@ -202,7 +202,7 @@ const CareerTimeline = () => {
               <img
                 src="/home-page-images/robot-career.png"
                 alt="Robot career timeline"
-                className="w-auto max-h-36 sm:max-h-48 md:max-h-[22rem] object-contain"
+                className="w-auto max-h-36 sm:max-h-48 md:max-h-[16rem] lg:max-h-[22rem] object-contain"
               />
             </motion.div>
 
@@ -260,7 +260,7 @@ const CareerTimeline = () => {
           {/* Entries */}
           <div className="relative max-w-3xl md:max-w-none">
             {/* Desktop-only continuous center spine line */}
-            <div className="absolute hidden md:block left-1/2 top-[2.375rem] bottom-[2.375rem] w-px -translate-x-1/2 bg-border/60" />
+            <div className="absolute hidden lg:block left-1/2 top-[2.375rem] bottom-[2.375rem] w-px -translate-x-1/2 bg-border/60" />
             {sortedData.map((item, index) => (
               <TimelineCard
                 key={`${sortOrder}-${item.role}`}
