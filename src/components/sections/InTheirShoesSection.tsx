@@ -133,14 +133,14 @@ const InTheirShoesSection = () => (
           &rdquo;
         </span>
 
-        <p className="relative text-[11px] font-semibold uppercase tracking-[0.2em] text-primary mb-8">
+        <p className="relative text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-8">
           The Goal
         </p>
 
-        <p className="relative mx-auto max-w-2xl text-2xl font-bold leading-snug tracking-tight text-white md:text-3xl lg:text-[2rem]">
+        <p className="relative mx-auto max-w-5xl text-xl font-bold leading-snug tracking-tight text-white md:text-2xl lg:text-[1.75rem]">
           As a PMM, my goal is never to be the antagonist of someone else&rsquo;s story.
         </p>
-        <p className="relative mx-auto mt-4 max-w-2xl text-2xl font-bold leading-snug tracking-tight text-white md:text-3xl lg:text-[2rem]">
+        <p className="relative mx-auto mt-4 max-w-5xl text-xl font-bold leading-snug tracking-tight text-white md:text-2xl lg:text-[1.75rem]">
           It&rsquo;s to win the Oscar for{" "}
           <span className="text-gradient">Best Supporting Actor</span>{" "}
           through shared perspective.
