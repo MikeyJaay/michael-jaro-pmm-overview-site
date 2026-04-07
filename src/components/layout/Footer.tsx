@@ -1,8 +1,7 @@
 const tools = [
-  { name: "Lovable", logo: "https://lovable.dev/favicon.ico"},
-  { name: "Claude Code", logo: "/home-page-images/claude-logo.svg"},
-  { name: "VS Code", logo: "https://code.visualstudio.com/favicon.ico" },
-  // { name: "Figma", logo: "https://static.figma.com/app/icon/1/favicon.png", url: "https://figma.com" },
+  { name: "Lovable", logo: "https://lovable.dev/favicon.ico", url: "https://lovable.dev" },
+  { name: "Claude Code", logo: "/home-page-images/claude-logo.svg", url: "https://claude.ai" },
+  { name: "VS Code", logo: "https://code.visualstudio.com/favicon.ico", url: "https://code.visualstudio.com" },
 ];
 
 const Footer = () => (
