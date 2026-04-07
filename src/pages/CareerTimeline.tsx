@@ -16,39 +16,55 @@ const timelineData = [
     role: "Product Marketing Associate",
     period: "NOV. 2019 — MAR. 2022",
     summary:
-      "Embedded within the engineering team to lead go-to-market and executive communications for a next-generation point-of-sale system, translating complex technical development into adoption-driving narratives for franchisees and executive leadership.",
+      "Embedded within the engineering team to support the rollout of a next-generation point-of-sale platform, translating technical development into executive communications, franchise readiness, and adoption across a complex global operator network.",
   },
   {
     company: "Codility",
     logo: codilityLogo,
-    role: "Sales Development Representative",
-    period: "MAR. 2022 — FEB. 2023",
+    role: "Sales Development Representative, Inbound",
+    period: "MAR. 2022 — JUN. 2022",
     summary:
-      "Advanced rapidly from inbound to top-performing outbound SDR by mastering technical buyer conversations and driving pipeline for an enterprise-grade engineering assessment platform.",
+      "Pivoted into SaaS sales by running consultative discovery with engineering and talent stakeholders evaluating developer assessment software, building early fluency in technical buyer conversations.",
+  },
+  {
+    company: "Codility",
+    logo: codilityLogo,
+    role: "Account Development Representative, Outbound",
+    period: "JUL. 2022 — FEB. 2023",
+    summary:
+      "Promoted within one quarter into outbound after becoming a top-performing rep, driving pipeline through technical prospecting and helping onboard new SDR hires navigating complex engineering-led sales conversations.",
   },
   {
     company: "Hackajob",
     logo: hackajobLogo,
-    role: "Growth Lead",
+    role: "Growth Lead | GTM Founding Team",
     period: "FEB. 2023 — MAY 2024",
     summary:
-      "Brought on as the third U.S. employee to drive the 0→1 U.S. go-to-market motion from zero brand awareness, launching and scaling a UK-based technical hiring platform through foundational messaging, positioning, and early customer acquisition.",
+      "Joined as the third North American hire to help build the company's first U.S. go-to-market motion, taking a UK-based technical hiring platform from zero brand awareness to early customer traction through foundational messaging, positioning, and market development.",
   },
   {
     company: "CrowdStrike",
     logo: crowdstrikeLogo,
-    role: "Product Marketing Manager",
+    role: "Product Marketing Manager, XIoT",
     period: "MAY 2024 — AUG. 2024",
     summary:
-      "Led the rebrand and go-to-market relaunch of Falcon for IoT to Falcon for XIoT, repositioning the platform for a billion-dollar critical infrastructure security market and contributing to $9M in pipeline generation ahead of full market rollout.",
+      "Led the rebrand and GTM relaunch of Falcon for IoT to Falcon for XIoT, repositioning the platform for a $9B critical infrastructure security market and translating complex technical capabilities into differentiated cybersecurity messaging.",
   },
   {
     company: "Mitratech",
     logo: mitratechLogo,
-    role: "Technical PMM, AI Trust & Security",
-    period: "FEB. 2025 — PRESENT",
+    role: "Product Marketing Manager, Platform",
+    period: "FEB. 2025 — DEC. 2025",
     summary:
-      "Promoted from Platform PMM to now owning AI trust and security go-to-market standards across an enterprise portfolio, shaping how LLM-based, solution-specific AI capabilities are responsibly launched, evaluated, and sold in enterprise environments.",
+      "Led go-to-market efforts across multiple solutions, including the launch of Mitratech HQ, while influencing $2.2M+ in pipeline through launches, webinars, and strategic deal support. Also rebuilt the company's competitive intelligence program and helped establish repeatable GTM systems that later supported broader AI enablement efforts.",
+  },
+  {
+    company: "Mitratech",
+    logo: mitratechLogo,
+    role: "Technical Product Marketing Manager, AI Trust & Security",
+    period: "JAN. 2026 — PRESENT",
+    summary:
+      "Lead AI trust and security product marketing across Mitratech's portfolio, owning the GTM standards for responsibly positioning and launching AI capabilities across 10+ domain-specific solutions. Translate complex AI architecture, security guardrails, and human-in-the-loop design into defensible market narratives that support enterprise adoption and security review.",
   },
 ];
 
@@ -247,7 +263,7 @@ const CareerTimeline = () => {
             <div className="absolute hidden md:block left-1/2 top-[2.375rem] bottom-[2.375rem] w-px -translate-x-1/2 bg-border/60" />
             {sortedData.map((item, index) => (
               <TimelineCard
-                key={`${sortOrder}-${item.company}`}
+                key={`${sortOrder}-${item.role}`}
                 item={item}
                 index={index}
                 isLast={index === sortedData.length - 1}
