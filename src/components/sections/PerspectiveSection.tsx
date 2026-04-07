@@ -53,12 +53,8 @@ const tabs = [
     body: [
       "Product marketing is where everything started to click.",
       "It\u2019s where the separate instruments finally became an orchestra \u2014 where buyer reality, technical depth, and market narrative stopped competing for attention and started moving in the same direction.",
-      "That\u2019s what drew me to PMM.",
+      
       "The best PMMs are conductors. They don\u2019t need to be the most skilled at every instrument \u2014 but they do need to understand each one well enough to bring the full performance to life.",
-      "That\u2019s what product marketing is to me:",
-      "The connective tissue.",
-      "The translator.",
-      "The force that helps everything move together.",
     ],
     image: "/home-page-images/robot-ven.png",
     imageAlt: "Robot PMM",
