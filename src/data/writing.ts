@@ -14,7 +14,7 @@ export const blogPosts: BlogPost[] = [
     title: "Security and Risk Gaps Behind AI Hiring Automation",
     publication: "Mitratech",
     description:
-      "Examines how unchecked AI automation and poor security governance introduces legal exposure, bias risk, and data privacy vulnerabilities — and what enterprise teams must do to stay protected.",
+      "Examines how unchecked AI automation and poor security governance introduces legal exposure, bias risk, and data privacy vulnerabilities—and what enterprise teams must do to stay protected.",
     date: "2025",
     url: "https://mitratech.com/resource-hub/blog/the-hidden-risks-of-ai-in-hiring/",
     category: "Company Post",
@@ -64,7 +64,7 @@ export const blogPosts: BlogPost[] = [
     title: "How to be a Successful Technical Recruiter in a Competitive Market",
     publication: "Codility",
     description:
-      "A practical breakdown of what separates high-performing technical recruiters from the rest — from understanding engineering roles to building a repeatable candidate pipeline.",
+      "A practical breakdown of what separates high-performing technical recruiters from the rest—from understanding engineering roles to building a repeatable candidate pipeline.",
     date: "2022",
     url: "https://www.codility.com/blog/how-to-be-a-successful-technical-recruiter/",
     category: "Company Post",

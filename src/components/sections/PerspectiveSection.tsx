@@ -9,7 +9,7 @@ const tabs = [
     title: "The Weight of a Quota",
     body: [
       "Sales was my first real exposure to how fast the market tests your assumptions.",
-      "At Codility, I led the outbound engine as a top SDR \u2014 cold-breaking into accounts ranging from 10-person SMBs to global enterprises, selling directly to software engineering leaders. I learned quickly that punchy messaging means nothing if it falls apart the second a buyer pushes back \u2014 or if it doesn\u2019t evolve as fast as the market does.",
+      "At Codility, I led the outbound engine as a top SDR\u2014cold-breaking into accounts ranging from 10-person SMBs to global enterprises, selling directly to software engineering leaders. I learned quickly that punchy messaging means nothing if it falls apart the second a buyer pushes back\u2014or if it doesn\u2019t evolve as fast as the market does.",
       "Sales taught me how buyers actually talk, where deals really stall, and how much gets lost when strategy is built too far away from the trenches.",
     ],
     image: "/home-page-images/robot-sales.png",
@@ -51,9 +51,9 @@ const tabs = [
     title: "Where It All Comes Together",
     body: [
       "Product marketing is where everything started to click.",
-      "It\u2019s where the separate instruments finally became an orchestra \u2014 where buyer reality, technical depth, and market narrative stopped competing for attention and started moving in the same direction.",
+      "It\u2019s where the separate instruments finally became an orchestra\u2014where buyer reality, technical depth, and market narrative stopped competing for attention and started moving in the same direction.",
       
-      "The best PMMs are conductors. They don\u2019t need to be the most skilled at every instrument \u2014 but they do need to understand each one well enough to bring the full performance to life.",
+      "The best PMMs are conductors. They don\u2019t need to be the most skilled at every instrument\u2014but they do need to understand each one well enough to bring the full performance to life.",
     ],
     image: "/home-page-images/robot-ven-2.png",
     imageAlt: "Robot PMM",
