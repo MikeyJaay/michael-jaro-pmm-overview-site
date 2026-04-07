@@ -45,7 +45,7 @@ const timelineData = [
   {
     company: "CrowdStrike",
     logo: crowdstrikeLogo,
-    role: "Product Marketing Manager, XIoT",
+    role: "Product Marketing Manager, XIoT (MBA Program)",
     period: "MAY 2024 — AUG. 2024",
     summary:
       "Led the rebrand and GTM relaunch of Falcon for IoT to Falcon for XIoT, repositioning the platform for a $9B critical infrastructure security market and translating complex technical capabilities into differentiated cybersecurity messaging.",
@@ -144,7 +144,7 @@ const TimelineCard = ({
 };
 
 const CareerTimeline = () => {
-  const [sortOrder, setSortOrder] = useState<"oldest" | "newest">("oldest");
+  const [sortOrder, setSortOrder] = useState<"oldest" | "newest">("newest");
 
   const sortedData =
     sortOrder === "oldest" ? timelineData : [...timelineData].reverse();
@@ -226,9 +226,9 @@ const CareerTimeline = () => {
               <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary sm:text-sm">
                 Experience
               </p>
-              <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-4xl">
-                5 Companies, One Thread
-              </h2>
+              {/* <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-4xl">
+                Built at the Intersection of Product, Marketing, and Sales 
+              </h2> */}
             </div>
 
             <div className="flex items-center gap-2 border-b border-border/40 pb-1">
