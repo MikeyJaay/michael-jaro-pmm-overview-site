@@ -121,15 +121,15 @@ const InTheirShoesSection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.65, delay: 0.2 }}
-        className="relative mt-14 overflow-hidden rounded-2xl bg-dark-section px-8 py-14 text-center md:px-16 md:py-16"
+        className="relative mt-14 overflow-hidden rounded-2xl bg-dark-section px-5 py-10 text-center sm:px-8 sm:py-14 md:px-16 md:py-16"
       >
         {/* Opening quote watermark */}
-        <span className="pointer-events-none absolute left-6 top-0 select-none text-[9rem] font-extrabold leading-none text-white/[0.12] md:text-[12rem]">
+        <span className="pointer-events-none absolute left-6 top-0 select-none hidden sm:block text-[9rem] font-extrabold leading-none text-white/[0.12] md:text-[12rem]">
           &ldquo;
         </span>
 
         {/* Closing quote watermark */}
-        <span className="pointer-events-none absolute -bottom-20 right-6 select-none text-[9rem] font-extrabold leading-none text-white/[0.12] md:text-[12rem]">
+        <span className="pointer-events-none absolute -bottom-20 right-6 select-none hidden sm:block text-[9rem] font-extrabold leading-none text-white/[0.12] md:text-[12rem]">
           &rdquo;
         </span>
 

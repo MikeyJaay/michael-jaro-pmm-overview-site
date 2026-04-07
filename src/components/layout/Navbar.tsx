@@ -57,7 +57,7 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="overflow-hidden border-b border-border/50 bg-background/95 backdrop-blur-xl md:hidden"
           >
-            <div className="container flex flex-col gap-1 py-4">
+            <div className="container flex flex-col gap-1.5 py-4">
               {links.map((link) => (
                 <Link
                   key={link.path}

@@ -154,7 +154,7 @@ const CareerTimeline = () => {
       {/* Hero */}
       <section className="relative overflow-hidden bg-hero-gradient py-20 md:py-28 lg:py-32">
         <div className="container relative mx-auto">
-          <div className="flex flex-col gap-12 md:flex-row md:items-center md:gap-16 lg:gap-20">
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:gap-16 lg:gap-20">
 
             {/* Left — text */}
             <div className="flex-1 min-w-0">
@@ -202,7 +202,7 @@ const CareerTimeline = () => {
               <img
                 src="/home-page-images/robot-career.png"
                 alt="Robot career timeline"
-                className="w-auto max-h-48 md:max-h-[22rem] object-contain"
+                className="w-auto max-h-36 sm:max-h-48 md:max-h-[22rem] object-contain"
               />
             </motion.div>
 

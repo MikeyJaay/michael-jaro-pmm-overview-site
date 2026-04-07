@@ -22,79 +22,93 @@ const columns = [
 ];
 
 const GtmBreaksSection = () => (
-  <section className="bg-dark-section py-14 md:py-20">
-    <div className="container mx-auto">
+  <>
+    {/* Dark section — heading + three cards */}
+    <section className="bg-dark-section py-14 md:py-20">
+      <div className="container mx-auto">
 
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="mb-10 md:mb-14"
-      >
-        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary sm:text-sm">
-          The Real Problem
-        </p>
-        <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl lg:text-[2.5rem]">
-          Where GTM Actually Breaks
-        </h2>
-      </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-10 md:mb-14"
+        >
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary sm:text-sm">
+            The Real Problem
+          </p>
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white md:text-4xl lg:text-[2.5rem]">
+            Where GTM Actually Breaks
+          </h2>
+        </motion.div>
 
-      {/* Three cards */}
-      <div className="grid gap-4 md:grid-cols-3 md:gap-6">
-        {columns.map((col, i) => (
-          <motion.div
-            key={col.label}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.12, duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-7 transition-colors duration-200 hover:border-primary/30 hover:bg-white/[0.07]"
-          >
-            {/* Top accent + label */}
-            <div className="mb-5 h-[3px] w-10 rounded-full bg-primary" />
-            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">
-              {col.label}
-            </p>
-
-            {/* Main statement */}
-            <p className="text-xl font-bold leading-snug text-white md:text-2xl">
-              {col.body}
-            </p>
-
-            {/* Detail */}
-            <p className="mt-4 flex-1 text-sm leading-relaxed text-white/55">
-              {col.detail}
-            </p>
-
-            {/* But... callout */}
-            <div className="mt-6 rounded-lg border border-white/8 bg-white/[0.04] px-4 py-3">
-              <p className="text-[13px] leading-relaxed text-white/40 italic">
-                {col.sub}
+        {/* Three cards */}
+        <div className="grid gap-4 md:grid-cols-3 md:gap-6">
+          {columns.map((col, i) => (
+            <motion.div
+              key={col.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.12, duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+              className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-7 transition-colors duration-200 hover:border-primary/30 hover:bg-white/[0.07]"
+            >
+              <div className="mb-5 h-[3px] w-10 rounded-full bg-primary" />
+              <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">
+                {col.label}
               </p>
-            </div>
-          </motion.div>
-        ))}
+              <p className="text-lg sm:text-xl font-bold leading-snug text-white md:text-2xl">
+                {col.body}
+              </p>
+              <p className="mt-4 flex-1 text-sm leading-relaxed text-white/55">
+                {col.detail}
+              </p>
+              <div className="mt-6 rounded-lg border border-white/8 bg-white/[0.04] px-3 py-2 sm:px-4 sm:py-3">
+                <p className="text-[13px] leading-relaxed text-white/40 italic">
+                  {col.sub}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
       </div>
+    </section>
 
-      {/* Closing statement */}
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        className="mt-10 md:mt-14"
-      >
-        <div className="w-full border-t border-white/10" />
-        <p className="py-10 text-center text-2xl font-bold leading-snug tracking-tight text-white md:text-3xl lg:text-[2rem]">
-          GTM doesn't fail from lack of talent.{" "}
-          <span className="text-primary/90">It fails when strong talent operates out of sync.</span>
-        </p>
-        <div className="w-full border-b border-white/10" />
-      </motion.div>
+    {/* Light section — closing card, matches "The Goal" format */}
+    <section className="bg-background py-14 md:py-20">
+      <div className="container mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.65, delay: 0.2 }}
+          className="relative overflow-hidden rounded-2xl bg-dark-section px-5 py-10 text-center sm:px-8 sm:py-14 md:px-16 md:py-16"
+        >
+          {/* Opening quote watermark */}
+          <span className="pointer-events-none absolute left-6 top-0 select-none hidden sm:block text-[9rem] font-extrabold leading-none text-white/[0.12] md:text-[12rem]">
+            &ldquo;
+          </span>
 
-    </div>
-  </section>
+          {/* Closing quote watermark */}
+          <span className="pointer-events-none absolute -bottom-20 right-6 select-none hidden sm:block text-[9rem] font-extrabold leading-none text-white/[0.12] md:text-[12rem]">
+            &rdquo;
+          </span>
+
+          <p className="relative mb-8 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+            The Real Problem
+          </p>
+
+          <p className="relative mx-auto max-w-5xl text-xl font-bold leading-snug tracking-tight text-white md:text-2xl lg:text-[1.75rem]">
+            GTM doesn&rsquo;t fail from lack of talent.
+          </p>
+          <p className="relative mx-auto mt-4 max-w-5xl text-xl font-bold leading-snug tracking-tight text-primary/90 md:text-2xl lg:text-[1.75rem]">
+            It fails when strong talent operates out of sync.
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  </>
 );
 
 export default GtmBreaksSection;

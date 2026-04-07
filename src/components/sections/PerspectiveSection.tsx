@@ -56,7 +56,7 @@ const tabs = [
       
       "The best PMMs are conductors. They don\u2019t need to be the most skilled at every instrument \u2014 but they do need to understand each one well enough to bring the full performance to life.",
     ],
-    image: "/home-page-images/robot-ven.png",
+    image: "/home-page-images/robot-ven-2.png",
     imageAlt: "Robot PMM",
   },
 ];
@@ -107,7 +107,7 @@ const PerspectiveSection = () => {
               key={tab.id}
               onClick={() => setActiveTab(i)}
               className={[
-                "relative px-5 pb-3 pt-1 text-sm font-medium transition-colors duration-200 focus:outline-none",
+                "relative px-3 sm:px-5 pb-2.5 sm:pb-3 pt-0.5 text-sm font-medium transition-colors duration-200 focus:outline-none",
                 activeTab === i
                   ? "text-primary"
                   : "text-muted-foreground hover:text-foreground",
@@ -153,11 +153,11 @@ const PerspectiveSection = () => {
             </div>
 
             {/* Right — robot graphic */}
-            <div className="flex justify-center items-start pt-28">
+            <div className="flex justify-center items-start pt-4 md:pt-28">
               <img
                 src={active.image}
                 alt={active.imageAlt}
-                className="w-auto max-h-48 md:max-h-[22rem] object-contain"
+                className="w-auto max-h-36 sm:max-h-48 md:max-h-[22rem] object-contain"
               />
             </div>
           </motion.div>
