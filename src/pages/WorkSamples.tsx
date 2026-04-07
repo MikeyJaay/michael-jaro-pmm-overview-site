@@ -72,9 +72,9 @@ const WorkSamples = () => (
               <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
                 My work spans more than individual assets. It spans systems, narratives, and frameworks that drive go-to-market from strategy through execution.
               </p>
-              <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
-                Across AI, cybersecurity, and enterprise SaaS, I&rsquo;ve built everything from technical positioning and executive narratives to launch systems, outbound frameworks, and sales enablement.
-              </p>
+              {/* <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
+                Across my career I've built everything from technical positioning and executive narratives to launch systems, outbound frameworks, and sales enablement.
+              </p> */}
               <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
                 If you&rsquo;re a hiring manager or recruiter, reach out on LinkedIn &mdash; I&rsquo;ll share examples tailored to your team context, where permissible.
               </p>
