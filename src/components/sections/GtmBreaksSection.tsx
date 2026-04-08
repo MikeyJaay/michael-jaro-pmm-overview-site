@@ -64,7 +64,7 @@ const GtmBreaksSection = () => (
                 {col.detail}
               </p>
               <div className="mt-6 rounded-lg border border-white/8 bg-white/[0.04] px-3 py-2 sm:px-4 sm:py-3">
-                <p className="text-[13px] leading-relaxed text-white/40 italic">
+                <p className="text-[13px] leading-relaxed text-white/80 italic">
                   {col.sub}
                 </p>
               </div>
