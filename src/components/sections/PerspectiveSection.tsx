@@ -148,6 +148,7 @@ const PerspectiveSection = () => {
                 <img
                   src={active.image}
                   alt={active.imageAlt}
+                  loading="lazy"
                   className="w-auto max-h-52 sm:max-h-64 object-contain"
                 />
               </div>
@@ -166,6 +167,7 @@ const PerspectiveSection = () => {
               <img
                 src={active.image}
                 alt={active.imageAlt}
+                loading="lazy"
                 className="w-auto md:max-h-[16rem] lg:max-h-[22rem] object-contain"
               />
             </div>

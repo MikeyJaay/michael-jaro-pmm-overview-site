@@ -12,6 +12,17 @@ export default defineConfig(() => ({
     },
   },
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("framer-motion")) return "vendor-motion";
+          if (id.includes("react-router-dom")) return "vendor-router";
+          if (id.includes("@radix-ui")) return "vendor-radix";
+        },
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
