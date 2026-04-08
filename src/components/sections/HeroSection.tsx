@@ -23,8 +23,8 @@ const HeroSection = () => {
               <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl">
                 Bridging the Gap Between…
               </h1>
-              <div className="mt-2 min-h-[2.25rem] sm:min-h-[2.75rem] md:min-h-[3.5rem] lg:min-h-[4.25rem]">
-                <p className="text-3xl font-extrabold sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl">
+              <div className="mt-2 min-h-[2.25rem] sm:min-h-[2.75rem] md:min-h-[2.75rem] lg:min-h-[4.25rem]">
+                <p className="text-3xl font-extrabold sm:text-4xl md:text-3xl lg:text-5xl xl:text-6xl">
                   <RotatingText />
                 </p>
               </div>

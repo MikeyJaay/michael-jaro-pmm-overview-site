@@ -86,12 +86,12 @@ const GtmBreaksSection = () => (
           className="relative overflow-hidden rounded-2xl bg-dark-section px-5 py-10 text-center sm:px-8 sm:py-14 md:px-10 md:py-14 lg:px-16 lg:py-16"
         >
           {/* Opening quote watermark */}
-          <span className="pointer-events-none absolute left-6 top-0 select-none hidden sm:block text-[9rem] font-extrabold leading-none text-white/[0.12] md:text-[12rem]">
+          <span className="pointer-events-none absolute left-6 top-0 select-none hidden sm:block text-[9rem] font-extrabold leading-none text-white/[0.12] md:text-[10rem] lg:text-[12rem]">
             &ldquo;
           </span>
 
           {/* Closing quote watermark */}
-          <span className="pointer-events-none absolute -bottom-20 right-6 select-none hidden sm:block text-[9rem] font-extrabold leading-none text-white/[0.12] md:text-[12rem]">
+          <span className="pointer-events-none absolute -bottom-20 right-6 select-none hidden sm:block text-[9rem] font-extrabold leading-none text-white/[0.12] md:text-[10rem] lg:text-[12rem]">
             &rdquo;
           </span>
 
