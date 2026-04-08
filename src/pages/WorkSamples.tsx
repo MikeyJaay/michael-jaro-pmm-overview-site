@@ -99,6 +99,7 @@ const WorkSamples = () => (
             <img
               src="/home-page-images/robot-samples.png"
               alt="Robot with samples"
+              loading="lazy"
               className="w-auto max-h-36 sm:max-h-48 md:max-h-[16rem] lg:max-h-[22rem] object-contain"
             />
           </motion.div>

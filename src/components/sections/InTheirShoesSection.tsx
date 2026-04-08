@@ -31,6 +31,7 @@ const InTheirShoesSection = () => (
           <img
             src="/home-page-images/robot-heart.png"
             alt="Robot with heart"
+            loading="lazy"
             className="mt-10 hidden w-full max-w-[260px] self-center object-contain md:block mx-auto"
           />
         </motion.div>

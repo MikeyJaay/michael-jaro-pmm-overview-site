@@ -3,12 +3,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { lazy, Suspense } from "react";
 import AppShell from "./components/layout/AppShell";
 import ScrollToTop from "./components/common/ScrollToTop";
-import Home from "./pages/Home";
-import CareerTimeline from "./pages/CareerTimeline";
-import Writing from "./pages/Writing";
-import WorkSamples from "./pages/WorkSamples";
+const Home = lazy(() => import("./pages/Home"));
+const CareerTimeline = lazy(() => import("./pages/CareerTimeline"));
+const Writing = lazy(() => import("./pages/Writing"));
+const WorkSamples = lazy(() => import("./pages/WorkSamples"));
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <Suspense fallback={<div />}>
         <Routes>
           <Route element={<AppShell />}>
             <Route path="/" element={<Home />} />
@@ -29,6 +31,7 @@ const App = () => (
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </Suspense>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
